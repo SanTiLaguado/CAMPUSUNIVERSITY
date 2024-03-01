@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-      <div class="logo">Dropdown</div>
+      <div class="logo"><img src="media/TSU.png" alt="CAMPUS UNIVERSIRY"></div>
   
       <input type="checkbox" id="toggle">
       <label for="toggle"> <img src="img/menu.png" alt=" menu"></label>
@@ -18,11 +18,16 @@
       <nav class="navigation">
         <ul>
           <li><a href="#">Inicio</a></li>
+          <li><a href="#">Informes</a><ul>
+              <li><a href="#">Matriculas</a></li>
+              <li><a href="#">Asignaturas </a></li>
+              <li><a href="#">Horarios</a></li></ul>
+          </li>
           <li><a href="#">Datos Existentes</a>
             <ul>
-              <li><a href="#">Programas <span>25</span></a></li>
-              <li><a href="#">Periodos <span>10</span></a></li>
-              <li><a href="#">Tarifas <span>15</span></a></li>
+              <li><a href="#">Programas</a></li>
+              <li><a href="#">Periodos</a></li>
+              <li><a href="#">Tarifas</a></li>
               <li><a href="#">Departamentos</a></li>
               <li><a href="#">Salones</a></li>
             </ul>
@@ -36,12 +41,64 @@
           </li>
           <li><a href="#">Matriculas</a>
             <ul>
-              <li><a href="#">Nueva Matricular <span>30 Posts</span></a></li>
-              <li><a href="#">Lista de Matriculas <span>20 Posts</span></a></li>
+              <li><a href="#">Nueva Matricula</a></li>
+              <li><a href="#">Lista de Matriculas</a></li>
         </ul>
       </nav>
     </header>
-  
-    <div class="hero"></div>
+    <main>
+<!-- INFORMES -->
+      <section id="inforMatriculas">
+        <h2>Total del matriculas</h2>
+        <div id="listado-Programas"></div>
+     </section>
+     <section id="inforAsignatura">
+        <h2>Informe de Asignaturas mas Matriculadas</h2>
+        <div id="listado-Periodos"></div>
+     </section>
+     <section id="Horarios">
+      <h2>Generacion de Horarios</h2>
+      <div id="Horarios-form"></div>
+      <div id="Horarios"></div>
+   </section>
+<!-- INFO EXISTENTE -->
+      <section id="Programas">
+        <h2>Listado de Programas</h2>
+        <div id="listado-Programas"></div>
+     </section>
+     <section id="Periodos">
+        <h2>Listado de Periodos</h2>
+        <div id="listado-Periodos"></div>
+     </section>
+     <section id="Tarifas">
+      <h2>Listado de Tarifas</h2>
+      <div id="listado-Tarifas"></div>
+   </section>
+   <section id="Departamentos">
+     <h2>Listado de Departamentos</h2>
+     <div id="listado-Departamentos"></div>
+     <!-- GESTION -->
+      <section id="Estudiantes">
+         <h2>Gestion de Estudiantes</h2>
+         <div id="Estudiantes-form"></div>
+         <div id="listado-Estudiantes"></div>
+      </section>
+      <section id="Docentes">
+         <h2>Gestion de Docentes</h2>
+         <div id="Docentes-form"></div>
+         <div id="listado-Docentes"></div>
+      </section>
+      <section id="Asignaturas">
+       <h2>Gestion de Asignaturas</h2>
+       <div id="Asignaturas-form"></div>
+       <div id="listado-Asignaturas"></div>
+    </section>
+<!-- MATRICULAS -->
+    <section id="Matriculas">
+      <h2>Gestion de Docentes</h2>
+      <div id="Matriculas-form"></div>
+      <div id="listado-Matriculas"></div>
+   </section>
+   </main>
 </body>
 </html>

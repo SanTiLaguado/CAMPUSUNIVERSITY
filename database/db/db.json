@@ -5,6 +5,12 @@
           "codigo": "P24-01",
           "ano": 2024,
           "semestre": 1
+        },
+        {
+          "id": 2,
+          "codigo": "P24-02",
+          "ano": 2024,
+          "semestre": 2
         }
      ],
      "programas": [
@@ -17,6 +23,46 @@
             "id": 2,
             "nombre": "Ingeniería de Mecatronica",
             "nivel": "Pregrado"
+        },
+        {
+          "id": 3,
+          "nombre": "Ingeniería de Industrial",
+          "nivel": "Pregrado"
+        },
+        {
+          "id": 4,
+          "nombre": "Ingeniería Civil",
+          "nivel": "Pregrado"
+        },
+        {
+          "id": 5,
+          "nombre": "Ingeniería Quimica",
+          "nivel": "Pregrado"
+        },
+        {
+          "id": 6,
+          "nombre": "Ingeniería de Electronica",
+          "nivel": "Pregrado"
+        },
+        {
+          "id": 7,
+          "nombre": "Ingeniería de Mecanica",
+          "nivel": "Pregrado"
+        },
+        {
+          "id": 8,
+          "nombre": "Diseño Grafico",
+          "nivel": "Pregrado"
+        },
+        {
+          "id": 9,
+          "nombre": "Derecho",
+          "nivel": "Pregrado"
+        },
+        {
+          "id": 10,
+          "nombre": "Idiomas & Lenguas extranjeras",
+          "nivel": "Pregrado"
         }
       ],
       "tarifas": [
