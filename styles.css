@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
     font-family: sans-serif;
     min-height: 100vh;
-    color: white;
+    color: black;
   }
   
   .header {
@@ -151,4 +151,54 @@ body {
       display: block;
     }
   }
-  
+
+
+
+main {
+    color: black;
+    width: 100vw;
+    max-width: 100%;
+}
+
+section{
+  width: 50%;
+  height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+button {
+    padding: 0.5em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item-li {
+  margin-bottom: 5px;
+}
