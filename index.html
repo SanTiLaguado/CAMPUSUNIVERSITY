@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="media/TSU.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     
     <link rel="stylesheet" href="styles.css">
-    <title>Campus University</title>
+    <title>The Sabios University</title>
 </head>
 <body>
     <header class="header">
       <div class="logo"><img src="media/TSU.png" alt="CAMPUS UNIVERSIRY"></div>
   
       <input type="checkbox" id="toggle">
-      <label for="toggle"> <img src="img/menu.png" alt=" menu"></label>
+      <label for="toggle"> <img src="media/TSU.png" alt=" menu"></label>
   
       <nav class="navigation">
         <ul>
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Informes</a><ul>
-              <li><a href="#">Matriculas</a></li>
-              <li><a href="#">Asignaturas </a></li>
-              <li><a href="#">Horarios</a></li></ul>
+              <li><a href="#">Informe Matriculas</a></li>
+              <li><a href="#">Informe Asignaturas</a></li>
+              <li><a href="#">Generar Horarios</a></li></ul>
           </li>
           <li><a href="#">Datos Existentes</a>
             <ul>
@@ -100,5 +101,12 @@
       <div id="listado-Matriculas"></div>
    </section>
    </main>
+   <script src="app.js"></script>
+   <script src="js/Asignaturas.js"></script>
+   <script src="js/Docentes.js"></script>
+   <script src="js/Estudiantes.js"></script>
+   <script src="js/Informes.js"></script>
+   <script src="js/ListadosExistentes.js"></script>
+   <script src="js/Matriculas.js"></script>
 </body>
 </html>
