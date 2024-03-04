@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     await handleNavigation();
-    await cargarProgramas();
+    await cargarListasExistentes();
     cargarFormularioEstudiantes();
     await cargarEstudiantes();
     mostrarListaEst();
