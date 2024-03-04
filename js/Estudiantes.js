@@ -22,7 +22,7 @@ const cargarEstudiantes= async()=>{
 
 const cargarFormularioEstudiantes=()=>{
     const EstudiantesForm = document.getElementById('Estudiantes-form');
-    EstudiantesForm.innerHTML = `
+    EstudiantesForm.innerHTML = `<h2>Crear Estudiantes</h2>
       <form>
           <label for="nombreEstudiante">Nombre del Estudiante:</label>
           <input type="text" id="nombreEstudiante" required>
@@ -47,7 +47,7 @@ const cargarFormularioEstudiantes=()=>{
           <label for="telefonoest">Telefono:</label>
           <input type="number" id="telefonoest" required>
           <label for="programaest">Programa:</label>
-          <div class="search-container">
+          <div class="search-container.prog">
             <input type="text" id="search-input-docs" placeholder="Buscar Programas...">
             <ul id="search-results-docs"></ul>
           </div>
@@ -186,3 +186,52 @@ const guardarEstudiante= async(nuevoEstudiante)=>{
       console.error("Error al cargar Estudiantes",error.message);
   }
 }
+
+const mostrarListaEst = async () => {
+  await cargarEstudiantes();
+
+  const busquedaEstudiantes = document.getElementById('busqueda-Estudiantes');  
+
+  busquedaEstudiantes.innerHTML = `
+    <div class="search-container.est">
+      <input type="text" id="search-input" placeholder="Buscar Estudiantes...">
+      <ul id="search-results"></ul>
+    </div>
+  `;
+
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  function displayResults(results) {
+    searchResults.innerHTML = '';
+
+    results.forEach(result => {
+      const li = document.createElement('li');
+      li.textContent = `ID: ${result.id}, Nombre: ${result.nombre}, Apellido: ${result.apellido}, Documento: ${result.numero_documento}, Programa ID: ${result.programa_id}`;
+      searchResults.appendChild(li);
+    });
+
+  if (results.length === 0) {
+    const li = document.createElement('li');
+    li.textContent = 'No se encontraron Estudiantes';
+    searchResults.appendChild(li);
+    return;
+  }
+}
+
+  searchInput.addEventListener('input', function() {
+    const inputValue = this.value.toLowerCase();
+    const filteredItems = listaEstudiantes.filter(estudiante => 
+      estudiante.numero_documento.toLowerCase().includes(inputValue)
+    );
+
+    displayResults(filteredItems);
+  });
+
+  displayResults(listaEstudiantes);
+};
+
+
+
+
+

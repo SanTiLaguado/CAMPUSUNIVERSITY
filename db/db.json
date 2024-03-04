@@ -63,6 +63,11 @@
       "id": "10",
       "nombre": "Idiomas & Lenguas extranjeras",
       "nivel": "Pregrado"
+    },
+    {
+      "id": "11",
+      "nombre": "Contabilidad",
+      "nivel": "Pregrado"
     }
   ],
   "tarifas": [
@@ -159,6 +164,19 @@
       "fecha_nacimiento": "2004-17-11",
       "sexo": "Masculino",
       "programa_id": "10"
+    },
+    {
+      "id": "5",
+      "nombre": "Clara Elibeth",
+      "apellido": "Osorio Reina",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "37510802",
+      "ciudad_residencia": "Bucaramanga",
+      "direccion": "Calle 36 # 34-52",
+      "telefono": "3154100075",
+      "fecha_nacimiento": "1977-01-04",
+      "sexo": "Masculino",
+      "programa_id": "11"
     }
   ],
   "cursos": [

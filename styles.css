@@ -7,7 +7,7 @@ body {
   }
   
   .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -162,16 +162,15 @@ main {
 }
 
 section{
-  width: 50%;
+  width: 100vw;
   height: fit-content;
-  padding-top: 110px;
   min-height: 105vh;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
 }
 
 button {
@@ -213,7 +212,7 @@ li {
 }
 
 #Inicio{
-  flex-direction: row;
+  flex-direction:row;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -231,6 +230,42 @@ li {
 #logotsu img{
   width: auto;
   height: 800px;
+}
+
+#Estudiantes{
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#Estudiantes h2{
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+#Estudiantes-form{
+  padding-left: 15em;
+  padding-right: 10em;
+  width: 50%;
+}
+
+#lista-Estudiantes{
+  width: 50%;
+  height: fit-content;
+  padding-left: 5em;
+  padding-right: 10em;
+}
+
+#search-input{
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+}
+
+#search-input-docs{
+  width: 100%;
+}
+#search-results{
+  padding-top: 10px;
 }
 
 footer{

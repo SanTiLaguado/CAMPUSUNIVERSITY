@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await cargarProgramas();
     cargarFormularioEstudiantes();
     await cargarEstudiantes();
+    mostrarListaEst();
+
 
     const links = document.querySelectorAll('.navigation a');
     links.forEach(link => {
