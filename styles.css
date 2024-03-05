@@ -17,6 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
   }
   
   .logo img{
@@ -114,13 +115,12 @@ body {
       top: 100%;
       left: 0;
       right: 0;
-  
+      background-color: #333;
       display: none;
     }
   
     .header .navigation ul li {
       width: 100%;
-      border-top: 1px solid blue;
     }
   
     .header .navigation ul li a {
@@ -134,7 +134,7 @@ body {
     }
   
     .header .navigation ul li ul li {
-      background-color: aqua;
+      background-color: rgb(151, 16, 16);
     }
   
     .header .navigation ul li ul li ul {
@@ -153,8 +153,6 @@ body {
     }
   }
 
-
-
 main {
     color: black;
     width: 100vw;
@@ -162,7 +160,7 @@ main {
 }
 
 section{
-  padding-top: 110px;
+  margin-top: 110px;
   width: 100vw;
   height: fit-content;
   min-height: 105vh;
