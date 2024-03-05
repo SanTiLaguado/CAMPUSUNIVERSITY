@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     await handleNavigation();
     await cargarListasExistentes();
     cargarFormularioEstudiantes();
-    await cargarEstudiantes();
     mostrarListaEst();
-
+    cargarFormularioDocentes();
+    mostrarListaDocts();
 
     const links = document.querySelectorAll('.navigation a');
     links.forEach(link => {

@@ -93,9 +93,7 @@ const cargarListasExistentes = async () => {
   await mostrarListaTarifas();
   await mostrarListaDepts();
   await mostrarListaSalones();
-  // Agrega aquí otras funciones que deseas cargar
 };
-
 
 //PROGRAMAS
 

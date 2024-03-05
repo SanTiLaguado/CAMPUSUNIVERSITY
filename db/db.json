@@ -98,7 +98,7 @@
     {
       "id": "1",
       "tipo_documento": "CC",
-      "numero_documetno": "13788555",
+      "numero_documento": "13788555",
       "nombre": "Juan",
       "apellido": "Pérez",
       "departamento_id": 1
@@ -106,7 +106,7 @@
     {
       "id": "2",
       "tipo_documento": "CC",
-      "numero_documetno": "137880000",
+      "numero_documento": "137880000",
       "nombre": "María",
       "apellido": "Gómez",
       "departamento_id": 2

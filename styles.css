@@ -265,7 +265,7 @@ li {
 #search-input-docs{
   width: 100%;
 }
-#search-results{
+#search-results-docs{
   padding-top: 10px;
 }
 
@@ -276,4 +276,26 @@ footer{
   background-color: #f1eded;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   padding-top: 0.5em;
+}
+
+#Docentes{
+  flex-wrap: wrap;
+  position: relative;
+}
+
+#Docentes h2{
+  width: 100%;
+  text-align: center;
+}
+#Docentes-form{
+  padding-left: 15em;
+  padding-right: 10em;
+  width: 50%;
+}
+
+#listado-Docentes{
+  width: 50%;
+  height: fit-content;
+  padding-left: 5em;
+  padding-right: 10em;
 }
