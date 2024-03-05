@@ -176,7 +176,7 @@ const crearDocente= async ()=>{
   
       results.forEach(result => {
         const li = document.createElement('li');
-        li.textContent = `ID: ${result.id}, Nombre: ${result.nombre}, Apellido: ${result.apellido}, Documento: ${result.tipo_documento} ${result.numero_documento}, Dpto ID: ${result.departamento_id}`;
+        li.textContent = `ID: ${result.id}, Nombre: ${result.nombre}, Apellido: ${result.apellido}, Documento: ${result.numero_documento}, Dpto ID: ${result.departamento_id}`;
         searchResultsDOCNTS.appendChild(li);
       });
   

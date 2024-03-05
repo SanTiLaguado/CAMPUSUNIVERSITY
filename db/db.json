@@ -110,6 +110,14 @@
       "nombre": "María",
       "apellido": "Gómez",
       "departamento_id": 2
+    },
+    {
+      "id": "3",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "09236712",
+      "nombre": "Martha",
+      "apellido": "Rey",
+      "programa_id": "2"
     }
   ],
   "alumnos": [
