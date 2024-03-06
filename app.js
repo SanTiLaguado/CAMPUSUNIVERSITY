@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     cargarFormularioEstudiantes();
     mostrarListaEst();
     cargarFormularioDocentes();
+    cargarFormularioAsignaturas()
     mostrarListaDocts();
 
     const links = document.querySelectorAll('.navigation a');

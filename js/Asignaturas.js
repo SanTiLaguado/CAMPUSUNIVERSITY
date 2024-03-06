@@ -39,7 +39,8 @@ const cargarCursos= async()=>{
     console.log(listaCursos)
 }
 
-const cargarFormularioAsignaturas=()=>{
+const cargarFormularioAsignaturas= async()=>{
+    await cargarCursos();
     const AsignaturasForm = document.getElementById('Asignaturas-form');
     AsignaturasForm.innerHTML = `<h2>Crear Asignaturas</h2>
       <form>
@@ -54,7 +55,7 @@ const cargarFormularioAsignaturas=()=>{
           <input type="number" id="cantcreditosasign" required>
           <label for="DocenteAsign">Seleccione Al Docente Encargado:</label>
           <div class="search-container.DocenteAsign">
-            <input type="text" id="search-input-cursoasign" placeholder="Buscar Docentes...">
+            <input type="text" id="search-input-DocenteAsign" placeholder="Buscar Docentes...">
             <ul id="search-results-DocenteAsign"></ul>
           </div>
           <label for="cuposAsign">Max de Cupos Disponibles:</label>
@@ -64,38 +65,19 @@ const cargarFormularioAsignaturas=()=>{
             <input type="text" id="search-input-ProgramaAsign" placeholder="Buscar Programas...">
             <ul id="search-results-ProgramaAsign"></ul>
           </div>
+          <label for="HorarioAsign">Seleccione un Horario:</label>
+            <select id="HorarioAsign" required>
+            </select>
           <button type="button" onclick="crearAsignatura()">Crear Docente</button>
           <!-- Aquí se puede añadir más funcionalidad, como modificar y eliminar clientes -->
       </form>
   `;
-
-  const searchInputcursoasign = document.getElementById('search-input-cursoasign"');
-  const searchResultscursoasign = document.getElementById('search-results-cursoasign');
   
-  function displayResultsDPTODOC(results) {
-    searchResultscursoasign.innerHTML = '';
+  buscadorProgramas('search-input-ProgramaAsign', 'search-results-ProgramaAsign');
+  buscadorProfesores('search-input-DocenteAsign', 'search-results-DocenteAsign');
   
-    if (results.length === 0) {
-      const li = document.createElement('li');
-      li.textContent = 'No se encontraron Cursos';
-      searchInputcursoasign.appendChild(li);
-      return;
-    }
-  
-    results.forEach(result => {
-      const li = document.createElement('li');
-      li.textContent = result.nombre;
-      li.addEventListener('click', function() {
-        searchInputdptodocnt.value = result.nombre;
-        searchInputcursoasign.innerHTML = '';
-      });
-      searchInputcursoasign.appendChild(li);
-    });
-  }
-  
-  searchInputdptodocnt.addEventListener('input', function() {
-      const inputValue = this.value.toLowerCase();
-      const filteredDptms = listaDepartamentos.filter(departamento => departamento.nombre.toLowerCase().includes(inputValue));
-      displayResultsDPTODOC(filteredDptms);
-  });
 }
+
+
+
+

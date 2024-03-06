@@ -1,4 +1,5 @@
-const tiposdedocumento = ["Cedula de Ciudadania", "Cedula de Extrangeria", "Tarjeta de Identidad"]
+const tiposdedocumento = ["Cedula de Ciudadania", "Cedula de Extrangeria", ]
+
 const cargartiposdocs=()=>{
     let options= ''
     for (let i = 0; i < tiposdedocumento.length; i++){
@@ -15,4 +16,13 @@ const cargarsexos=()=>{
     }
     return options
 }
+// DESPLEGABLE PARA LOS DIAS DE LA SEMANA 
 
+const dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"]
+const cargardias=()=>{
+    let options= ''
+    for (let i = 0; i < dias.length; i++){
+        options += `<option value="${dias[i]}">${dias[i]}</option>`
+    }
+    return options
+}
