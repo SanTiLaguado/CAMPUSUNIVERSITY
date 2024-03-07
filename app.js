@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await handleNavigation();
     await cargarListasExistentes();
     cargarFormularioEstudiantes();
-    mostrarListaEst();
+    await mostrarListaEst();
     cargarFormularioDocentes();
     cargarFormularioAsignaturas()
     mostrarListaDocts();

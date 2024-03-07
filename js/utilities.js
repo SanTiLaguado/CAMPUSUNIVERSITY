@@ -16,7 +16,6 @@ const cargarsexos=()=>{
     }
     return options
 }
-// DESPLEGABLE PARA LOS DIAS DE LA SEMANA 
 
 const dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes"]
 const cargardias=()=>{
@@ -26,3 +25,12 @@ const cargardias=()=>{
     }
     return options
 }
+
+const selectSalones = () => {
+    let options = '';
+    for (let i = 0; i < listaSalones.length; i++) {
+      const salon = listaSalones[i];
+      options += `<option value="${salon.id}">Salón ${salon.numero_identificacion}, ${salon.edificio}, Piso ${salon.piso}</option>`;
+    }
+    return options;
+  }

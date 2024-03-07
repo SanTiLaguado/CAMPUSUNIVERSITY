@@ -186,7 +186,6 @@
       "sexo": "Masculino",
       "programa_id": "11"
     },
-    [
       {
         "id": "5",
         "nombre": "Juan",
@@ -460,8 +459,7 @@
         "sexo": "masculino",
         "programa_id": "1"
       }
-    ]
-  ],
+    ],
   "cursos": [
     {
       "id": "1",

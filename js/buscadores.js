@@ -1,3 +1,6 @@
+
+
+
 function buscadorProgramas(searchInput, searchResults) {
     const searchInputPROG = document.getElementById(searchInput);
     const searchResultsPROG = document.getElementById(searchResults);
@@ -29,17 +32,18 @@ function buscadorProgramas(searchInput, searchResults) {
         displayResultsDOCS(filteredPrograms);
     });
 }
-function buscadorProfesores(searchInput1, searchResults1){
-    const searchInputdptodocnt = document.getElementById('searchInput1');
-    const searchResultsdptodocnt = document.getElementById('searchResults1');
+
+function buscadorDepartamentos(searchInput1, searchResults1){
+    const searchInputdpto = document.getElementById(searchInput1);
+    const searchResultsdpto = document.getElementById(searchResults1);
     
-    function displayResultsDPTODOC(results) {
-      searchResultsdptodocnt.innerHTML = '';
+    function displayResultsDPTOS(results) {
+      searchResultsdpto.innerHTML = '';
     
       if (results.length === 0) {
         const li = document.createElement('li');
         li.textContent = 'No se encontraron departamentos';
-        searchResultsdptodocnt.appendChild(li);
+        searchResultsdpto.appendChild(li);
         return;
       }
     
@@ -47,46 +51,81 @@ function buscadorProfesores(searchInput1, searchResults1){
         const li = document.createElement('li');
         li.textContent = result.nombre;
         li.addEventListener('click', function() {
-          searchInputdptodocnt.value = result.nombre;
-          searchResultsdptodocnt.innerHTML = '';
+          searchInputdpto.value = result.nombre;
+          searchResultsdpto.innerHTML = '';
         });
-        searchResultsdptodocnt.appendChild(li);
+        searchResultsdpto.appendChild(li);
       });
     }
     
-    searchInputdptodocnt.addEventListener('input', function() {
+    searchInputdpto.addEventListener('input', function() {
         const inputValue = this.value.toLowerCase();
         const filteredDptms = listaDepartamentos.filter(departamento => departamento.nombre.toLowerCase().includes(inputValue));
-        displayResultsDPTODOC(filteredDptms);
+        displayResultsDPTOS(filteredDptms);
     });
-    function buscadorCursos(searchInput2, searchResults2){
-        const searchInputcursoasign = document.getElementById('searchInput2');
-        const searchResultscursoasign = document.getElementById('searchResults2');
-        
-        function displayResultsCursoAsign(results) {
-          searchResultscursoasign.innerHTML = '';
-      
+
+  }
+  
+  function buscadorCursos(searchInput2, searchResults2){
+      const searchInputCursos = document.getElementById(searchInput2);
+      const searchResultsCursos = document.getElementById(searchResults2);
+  
+      function displayResultsDOCS(results) {
+          searchResultsCursos.innerHTML = '';
+  
           if (results.length === 0) {
-            const li = document.createElement('li');
-            li.textContent = 'No se encontraron Cursos';
-            searchResultscursoasign.appendChild(li);
-            return;
-          }    
-          
-            results.forEach(result => {
-            const li = document.createElement('li');
-            li.textContent = result.nombre;
-            li.addEventListener('click', function() {
-              searchInputcursoasign.value = result.nombre;
-              searchInputcursoasign.innerHTML = '';
-            });
-            searchInputcursoasign.appendChild(li);
+              const li = document.createElement('li');
+              li.textContent = 'No se encontraron programas';
+              searchResultsCursos.appendChild(li);
+              return;
+          }
+  
+          results.forEach(result => {
+              const li = document.createElement('li');
+              li.textContent = result.nombre;
+              li.addEventListener('click', function () {
+                searchInputCursos.value = result.nombre;
+                  searchResultsCursos.innerHTML = '';
+              });
+              searchResultsCursos.appendChild(li);
           });
-        }  
-            searchInputcursoasign.addEventListener('input', function() {
-            const inputValue = this.value.toLowerCase();
-            const filteredCursos = listaCursos.filter(curso => curso.nombre.toLowerCase().includes(inputValue));
-            displayResultsCursoAsign(filteredCursos);
-        });
-    }
+      }
+  
+      searchInputCursos.addEventListener('input', function () {
+          const inputValue = this.value.toLowerCase();
+          const filteredCurses = listaCursos.filter(curso => curso.nombre.toLowerCase().includes(inputValue));
+          displayResultsDOCS(filteredCurses);
+      });
+  }
+
+  function buscadorDocentes(searchInput3, searchResults3) {
+    const searchInputDOCNT = document.getElementById(searchInput3);
+    const searchResultsDOCNT = document.getElementById(searchResults3);
+
+    function displayResultsDOCS(results) {
+      searchResultsDOCNT.innerHTML = '';
+
+      if (results.length === 0) {
+          const li = document.createElement('li');
+          li.textContent = 'No se encontraron docentes';
+          searchResultsDOCNT.appendChild(li);
+          return;
+      }
+
+      results.forEach(result => {
+          const li = document.createElement('li');
+          li.textContent = `${result.nombre} ${result.apellido}`;
+          li.addEventListener('click', function () {
+              searchInputDOCNT.value = `${result.nombre} ${result.apellido}`;
+              searchResultsDOCNT.innerHTML = '';
+          });
+          searchResultsDOCNT.appendChild(li);
+      });
+  }
+
+    searchInputDOCNT.addEventListener('input', function () {
+        const inputValue = this.value.toLowerCase();
+        const filteredDcnts = listaDocentes.filter(docente => docente.nombre.toLowerCase().includes(inputValue));
+        displayResultsDOCS(filteredDcnts);
+    });
 }

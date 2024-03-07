@@ -187,6 +187,9 @@ const guardarEstudiante= async(nuevoEstudiante)=>{
   }
 }
 
+
+  // LA FUNCION DE BUSQUEDA EN APARTADO DE GESTION ES MEJOR DEJARLA COMO ESTA
+  
 const mostrarListaEst = async () => {
   await cargarEstudiantes();
 
@@ -194,38 +197,38 @@ const mostrarListaEst = async () => {
 
   busquedaEstudiantes.innerHTML = `
     <div class="search-container.est">
-      <input type="text" id="search-input" placeholder="Buscar Estudiantes...">
-      <ul id="search-results"></ul>
+      <input type="text" id="search-input-EST" placeholder="Buscar Estudiantes...">
+      <ul id="search-results-EST"></ul>
     </div>
   `;
 
-  const searchInput = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
+  const searchInputEST = document.getElementById('search-input-EST');
+  const searchResultsEST = document.getElementById('search-results-EST');
 
   function displayResults(results) {
-    searchResults.innerHTML = '';
+    searchResultsEST.innerHTML = '';
 
     results.forEach(result => {
       const li = document.createElement('li');
       li.textContent = `ID: ${result.id}, Nombre: ${result.nombre}, Apellido: ${result.apellido}, Documento: ${result.numero_documento}, Programa ID: ${result.programa_id}`;
-      searchResults.appendChild(li);
+      searchResultsEST.appendChild(li);
     });
 
   if (results.length === 0) {
     const li = document.createElement('li');
     li.textContent = 'No se encontraron Estudiantes';
-    searchResults.appendChild(li);
+    searchResultsEST.appendChild(li);
     return;
   }
 }
 
-  searchInput.addEventListener('input', function() {
+  searchInputEST.addEventListener('input', function() {
     const inputValue = this.value.toLowerCase();
-    const filteredItems = listaEstudiantes.filter(estudiante => 
+    const filteredEst = listaEstudiantes.filter(estudiante => 
       estudiante.numero_documento.toLowerCase().includes(inputValue)
     );
 
-    displayResults(filteredItems);
+    displayResults(filteredEst);
   });
 
   displayResults(listaEstudiantes);

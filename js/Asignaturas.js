@@ -65,19 +65,66 @@ const cargarFormularioAsignaturas= async()=>{
             <input type="text" id="search-input-ProgramaAsign" placeholder="Buscar Programas...">
             <ul id="search-results-ProgramaAsign"></ul>
           </div>
+          <div id="horarios">
+          <label for="HorarioAsign">Seleccione un Horario:</label>
+            <div id="horarios">
+              <label for="dia-1">Día:</label>
+              <select class="HorarioDia" required>
+                ${cargardias()}
+              </select>
+              <label for="hora-1">Horario:</label>
+              <select class="HorarioHoras" required>
+                ${cargarHorarios()}
+              </select>
+              <label for="salon-1">Salón:</label>
+              <select class="HorarioSalon" required>
+                ${selectSalones()}
+              </select>
+            </div>
+          </div>
+
+          <button type="button" id="agregarHorario">Agregar otro horario</button>
           <label for="HorarioAsign">Seleccione un Horario:</label>
             <select id="HorarioAsign" required>
             </select>
           <button type="button" onclick="crearAsignatura()">Crear Docente</button>
           <!-- Aquí se puede añadir más funcionalidad, como modificar y eliminar clientes -->
       </form>
-  `;
-  
-  buscadorProgramas('search-input-ProgramaAsign', 'search-results-ProgramaAsign');
-  buscadorProfesores('search-input-DocenteAsign', 'search-results-DocenteAsign');
-  
-}
 
+      
+  `;
+
+  const horariosContainer = document.getElementById('horarios');
+  const agregarHorarioBtn = document.getElementById('agregarHorario');
+  let horarioCount = 1;
+
+  agregarHorarioBtn.addEventListener('click', function () {
+      horarioCount++;
+
+      const nuevoHorario = document.createElement('div');
+      nuevoHorario.classList.add('horario');
+      nuevoHorario.innerHTML = `
+          <label for="dia-${horarioCount}">Día:</label>
+          <select name="dia[]" id="dia-${horarioCount}" required>
+          ${cargardias()}
+          </select>
+          <label for="hora-${horarioCount}">Horario:</label>
+          <select name="hora[]" id="hora-${horarioCount}" required>
+          ${cargarHorarios()}
+          </select>
+          <label for="salon-${horarioCount}">Salón:</label>
+          <select name="salon[]" id="salon-${horarioCount}" required>
+          ${selectSalones()}
+          </select>
+      `;
+
+      horariosContainer.appendChild(nuevoHorario);
+  });
+
+  buscadorDocentes('search-input-DocenteAsign', 'search-results-DocenteAsign')
+  buscadorCursos('search-input-cursoasign', 'search-results-cursoasign')
+  buscadorProgramas('search-input-ProgramaAsign', 'search-results-ProgramaAsign')
+}
 
 
 

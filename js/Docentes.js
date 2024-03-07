@@ -44,35 +44,7 @@ const cargarFormularioDocentes=()=>{
       </form>
   `;
 
-  const searchInputdptodocnt = document.getElementById('search-input-dptodocnt');
-  const searchResultsdptodocnt = document.getElementById('search-results-dptodocnt');
-  
-  function displayResultsDPTODOC(results) {
-    searchResultsdptodocnt.innerHTML = '';
-  
-    if (results.length === 0) {
-      const li = document.createElement('li');
-      li.textContent = 'No se encontraron departamentos';
-      searchResultsdptodocnt.appendChild(li);
-      return;
-    }
-  
-    results.forEach(result => {
-      const li = document.createElement('li');
-      li.textContent = result.nombre;
-      li.addEventListener('click', function() {
-        searchInputdptodocnt.value = result.nombre;
-        searchResultsdptodocnt.innerHTML = '';
-      });
-      searchResultsdptodocnt.appendChild(li);
-    });
-  }
-  
-  searchInputdptodocnt.addEventListener('input', function() {
-      const inputValue = this.value.toLowerCase();
-      const filteredDptms = listaDepartamentos.filter(departamento => departamento.nombre.toLowerCase().includes(inputValue));
-      displayResultsDPTODOC(filteredDptms);
-  });
+  buscadorDepartamentos('search-input-dptodocnt', 'search-results-dptodocnt');
 }
 
 const crearDocente= async ()=>{
@@ -156,9 +128,12 @@ const crearDocente= async ()=>{
     }
   }
 
+    // LA FUNCION DE BUSQUEDA EN APARTADO DE GESTION ES MEJOR DEJARLA COMO ESTA
+    
   const mostrarListaDocts = async () => {
     await cargarDocentes()
   
+    
     const busquedaDocentes = document.getElementById('busqueda-Docentes');  
   
     busquedaDocentes.innerHTML = `
@@ -167,11 +142,11 @@ const crearDocente= async ()=>{
         <ul id="search-results-docnts"></ul>
       </div>
     `;
-  
+
     const searchInputDOCNTS = document.getElementById('search-input-docnts');
     const searchResultsDOCNTS = document.getElementById('search-results-docnts');
   
-    function displayResults(results) {
+    function displayResultsDOCTS(results) {
       searchResultsDOCNTS.innerHTML = '';
   
       results.forEach(result => {
@@ -191,11 +166,11 @@ const crearDocente= async ()=>{
     searchInputDOCNTS.addEventListener('input', function() {
       const inputValue = this.value.toLowerCase();
       const filteredItems = listaDocentes.filter(docente => 
-        docente.numero_documento.toLowerCase().includes(inputValue)
+        docente.nombre.toLowerCase().includes(inputValue) || docente.numero_documento.toLowerCase().includes(inputValue)
       );
   
-      displayResults(filteredItems);
+      displayResultsDOCTS(filteredItems);
     });
   
-    displayResults(listaDocentes);
+    displayResultsDOCTS(listaDocentes);
   };
