@@ -120,7 +120,7 @@
       "departamento_id": 2
     },
     {
-      "id": "3",
+      "id": 3,
       "tipo_documento": "Cedula de Ciudadania",
       "numero_documento": "09236712",
       "nombre": "Martha",
@@ -488,6 +488,12 @@
       "nombre": "Álgebra Lineal",
       "codigo": "ALG-LI",
       "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "3",
+      "nombre": "Fisica Molecular",
+      "codigo": "FIS-MOL",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
     }
   ],
   "salones": [
@@ -543,6 +549,36 @@
           "salon_id": 1
         }
       ]
+    },
+    {
+      "id": "1",
+      "curso_id": "3",
+      "codigo": "FISIC-MOLEC-PER-1-2024\"",
+      "creditos": "4",
+      "profesor_id": null,
+      "cupos_disponibles": "30",
+      "programa_id": "5",
+      "horario_clases": []
+    },
+    {
+      "id": "1",
+      "curso_id": "3",
+      "codigo": "FISIC-MOLEC-PER-1-2024\"",
+      "creditos": "4",
+      "profesor_id": null,
+      "cupos_disponibles": "32",
+      "programa_id": "5",
+      "horario_clases": []
+    },
+    {
+      "id": "1",
+      "curso_id": "3",
+      "codigo": "FISIC-MOLEC-PER-1-2024\"",
+      "creditos": "4",
+      "profesor_id": null,
+      "cupos_disponibles": "4",
+      "programa_id": "5",
+      "horario_clases": []
     }
   ],
   "matriculas": [
