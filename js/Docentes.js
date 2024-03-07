@@ -82,7 +82,7 @@ const crearDocente= async ()=>{
         numero_documento: numerodocumento,
         nombre: nombre,
         apellido: apellido,
-        programa_id: DptoId
+        departamento_id: DptoId
     }
   
     await cargarDocentes();
