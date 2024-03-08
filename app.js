@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await mostrarListaDocts();
     cargarFormularioAsignaturas();
     await mostrarListaAsignaturas();
+    cargarFormularioMatriculas();
 
     const links = document.querySelectorAll('.navigation a');
     links.forEach(link => {
@@ -59,9 +60,9 @@ const sectionMap = {
     'Lista de Matriculas': 'Lista-Matriculas'
 };
 
-
 function handleNavigation(linkText) {
     console.log('Hiciste clic en:', linkText);
     const sectionId = sectionMap[linkText] || 'Inicio';
+    
     navigateToSection(sectionId);
 }

@@ -33,4 +33,18 @@ const selectSalones = () => {
       options += `<option value="${salon.id}">Salón ${salon.numero_identificacion}, ${salon.edificio}, Piso ${salon.piso}</option>`;
     }
     return options;
-  }
+}
+
+const myPopup = new Popup({
+    id: "docentespop",
+    title: "Docente",
+    content: `
+        An example popup.
+        Supports multiple lines.`,
+});
+
+const popupdocentes=async()=>{
+    myPopup.show();
+    await sleep(10000);
+    myPopup.hide();
+}

@@ -1,6 +1,3 @@
-
-
-
 function buscadorProgramas(searchInput, searchResults) {
     const searchInputPROG = document.getElementById(searchInput);
     const searchResultsPROG = document.getElementById(searchResults);
@@ -129,3 +126,4 @@ function buscadorDepartamentos(searchInput1, searchResults1){
         displayResultsDOCS(filteredDcnts);
     });
 }
+

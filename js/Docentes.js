@@ -39,138 +39,138 @@ const cargarFormularioDocentes=()=>{
             <input type="text" id="search-input-dptodocnt" placeholder="Buscar Programas...">
             <ul id="search-results-dptodocnt"></ul>
           </div>
-          <button type="button" onclick="crearDocente()">Crear Docente</button>
+          <button id="button-doc" type="button" onclick="crearDocente(); popupdocentes();">Crear Docente</button>
           <!-- Aquí se puede añadir más funcionalidad, como modificar y eliminar clientes -->
       </form>
   `;
-
+  
   buscadorDepartamentos('search-input-dptodocnt', 'search-results-dptodocnt');
 }
 
 const crearDocente= async ()=>{
-    const nombreInput=document.getElementById('nombreDocente');
-    const apellidoInput=document.getElementById('apellidoDocente');
-    const tipodocInput=document.getElementById('tipodocumentodocnte');
-    const nrodocInput=document.getElementById('numdocumentodocnte');
-    const DptoInput=document.getElementById('search-input-dptodocnt');
-    
-    const nombre=nombreInput.value;
-    const apellido=apellidoInput.value;
-    const tipodocumento=tipodocInput.value;
-    const numerodocumento=nrodocInput.value;
-    const DptoIngresado=DptoInput.value;
+  event.preventDefault();
+  const nombreInput=document.getElementById('nombreDocente');
+  const apellidoInput=document.getElementById('apellidoDocente');
+  const tipodocInput=document.getElementById('tipodocumentodocnte');
+  const nrodocInput=document.getElementById('numdocumentodocnte');
+  const DptoInput=document.getElementById('search-input-dptodocnt');
   
-    async function relacionarid(DptoIngresado) {
-      const DptoSeleccionado = listaDepartamentos.find(departamento => departamento.nombre === DptoIngresado);
-  
-      if (DptoSeleccionado) {
-          const DptoId = DptoSeleccionado.id;
-          console.log('ID del programa seleccionado:', DptoId);
-          return DptoId;
-      } else {
-          console.log('Programa no encontrado en el JSON de programas');
-          return null;
-      }
-  }
-  
-   const DptoId = await relacionarid(DptoIngresado);
-   const nuevoidDocnt = (listaDocentes.length + 1).toString();
-    
-    const nuevoDocente={
-        id: nuevoidDocnt,
-        tipo_documento: tipodocumento,
-        numero_documento: numerodocumento,
-        nombre: nombre,
-        apellido: apellido,
-        departamento_id: Number(DptoId)
-    }
-  
-    await cargarDocentes();
-    await guardarDocente(nuevoDocente);
-    await limpiarFormularioDOCTS();
-  
-    alert('Docente creado con éxito!');
-    console.log("Docente Creado éxito!")
-    return nuevoDocente;
-  }
+  const nombre=nombreInput.value;
+  const apellido=apellidoInput.value;
+  const tipodocumento=tipodocInput.value;
+  const numerodocumento=nrodocInput.value;
+  const DptoIngresado=DptoInput.value;
 
-  const limpiarFormularioDOCTS = () => {
-    const limpiarValorInput = id => document.getElementById(id).value = '';
-  
-    limpiarValorInput('nombreDocente');
-    limpiarValorInput('apellidoDocente');
-    limpiarValorInput('tipodocumentodocnte');
-    limpiarValorInput('numdocumentodocnte');
-    limpiarValorInput('search-input-dptodocnt');
-  };
-  
-  const guardarDocente= async(nuevoDocente)=>{
-    try{
-  
-        const respuesta=await fetch('http://localhost:3000/profesores',{
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body: JSON.stringify(nuevoDocente),
-        });
-  
-        if(!respuesta.ok){
-           throw new Error('Error al crear el Docente. Estado: ',respuesta.status);
-        }
-        
-        const DocenteCreado=await respuesta.json();
-        
-        console.log('EstudianteCreado creado:', DocenteCreado);
-  
-    }catch(error){
-        console.error("Error al cargar Docentes",error.message);
+  async function relacionarid(DptoIngresado) {
+    const DptoSeleccionado = listaDepartamentos.find(departamento => departamento.nombre === DptoIngresado);
+
+    if (DptoSeleccionado) {
+        const DptoId = DptoSeleccionado.id;
+        console.log('ID del programa seleccionado:', DptoId);
+        return DptoId;
+    } else {
+        console.log('Programa no encontrado en el JSON de programas');
+        return null;
     }
   }
 
-    // LA FUNCION DE BUSQUEDA EN APARTADO DE GESTION ES MEJOR DEJARLA COMO ESTA
-    
-  const mostrarListaDocts = async () => {
-    await cargarDocentes()
+  const DptoId = await relacionarid(DptoIngresado);
+  const nuevoidDocnt = (listaDocentes.length + 1).toString();
   
-    
-    const busquedaDocentes = document.getElementById('busqueda-Docentes');  
-  
-    busquedaDocentes.innerHTML = `
-      <div class="search-container.docnts">
-        <input type="text" class="input-gestion" id="search-input-docnts" placeholder="Buscar Docentes...">
-        <ul class="results-lists" id="search-results-docnts"></ul>
-      </div>
-    `;
+  const nuevoDocente={
+      id: nuevoidDocnt,
+      tipo_documento: tipodocumento,
+      numero_documento: numerodocumento,
+      nombre: nombre,
+      apellido: apellido,
+      departamento_id: Number(DptoId)
+  }
 
-    const searchInputDOCNTS = document.getElementById('search-input-docnts');
-    const searchResultsDOCNTS = document.getElementById('search-results-docnts');
+  await cargarDocentes();
+  await guardarDocente(nuevoDocente);
+  await limpiarFormularioDOCTS();
+
+  console.log("Docente Creado éxito!")
+  return nuevoDocente;
+}
+
+const limpiarFormularioDOCTS = () => {
+  const limpiarValorInput = id => document.getElementById(id).value = '';
+
+  limpiarValorInput('nombreDocente');
+  limpiarValorInput('apellidoDocente');
+  limpiarValorInput('tipodocumentodocnte');
+  limpiarValorInput('numdocumentodocnte');
+  limpiarValorInput('search-input-dptodocnt');
+};
+
+const guardarDocente= async(nuevoDocente)=>{
   
-    function displayResultsDOCTS(results) {
-      searchResultsDOCNTS.innerHTML = '';
-  
-      results.forEach(result => {
-        const li = document.createElement('li');
-        li.textContent = `ID: ${result.id}, Nombre: ${result.nombre}, Apellido: ${result.apellido}, Documento: ${result.numero_documento}, Dpto ID: ${result.departamento_id}`;
-        searchResultsDOCNTS.appendChild(li);
+  try{
+
+      const respuesta=await fetch('http://localhost:3000/profesores',{
+          method:'POST',
+          headers:{
+              'Content-Type':'application/json'
+          },
+          body: JSON.stringify(nuevoDocente),
       });
-  
-    if (results.length === 0) {
-      const li = document.createElement('li');
-      li.textContent = 'No se encontraron Docentes';
-      searchResultsDOCNTS.appendChild(li);
-      return;
-    }
+
+      if(!respuesta.ok){
+         throw new Error('Error al crear el Docente. Estado: ',respuesta.status);
+      }
+      
+      const DocenteCreado=await respuesta.json();
+      
+      console.log('EstudianteCreado creado:', DocenteCreado);
+
+  }catch(error){
+      console.error("Error al cargar Docentes",error.message);
   }
   
-    searchInputDOCNTS.addEventListener('input', function() {
-      const inputValue = this.value.toLowerCase();
-      const filteredItems = listaDocentes.filter(docente => 
-        docente.nombre.toLowerCase().includes(inputValue) || docente.numero_documento.toLowerCase().includes(inputValue)
-      );
+}
+  // LA FUNCION DE BUSQUEDA EN APARTADO DE GESTION ES MEJOR DEJARLA COMO ESTA
   
-      displayResultsDOCTS(filteredItems);
+const mostrarListaDocts = async () => {
+  await cargarDocentes()
+
+  
+  const busquedaDocentes = document.getElementById('busqueda-Docentes');  
+
+  busquedaDocentes.innerHTML = `
+    <div class="search-container.docnts">
+      <input type="text" class="input-gestion" id="search-input-docnts" placeholder="Buscar Docentes...">
+      <ul class="results-lists" id="search-results-docnts"></ul>
+    </div>
+  `;
+  const searchInputDOCNTS = document.getElementById('search-input-docnts');
+  const searchResultsDOCNTS = document.getElementById('search-results-docnts');
+
+  function displayResultsDOCTS(results) {
+    searchResultsDOCNTS.innerHTML = '';
+
+    results.forEach(result => {
+      const li = document.createElement('li');
+      li.textContent = `ID: ${result.id}, Nombre: ${result.nombre}, Apellido: ${result.apellido}, Documento: ${result.numero_documento}, Dpto ID: ${result.departamento_id}`;
+      searchResultsDOCNTS.appendChild(li);
     });
-  
-    displayResultsDOCTS(listaDocentes);
-  };
+
+  if (results.length === 0) {
+    const li = document.createElement('li');
+    li.textContent = 'No se encontraron Docentes';
+    searchResultsDOCNTS.appendChild(li);
+    return;
+  }
+}
+
+  searchInputDOCNTS.addEventListener('input', function() {
+    const inputValue = this.value.toLowerCase();
+    const filteredItems = listaDocentes.filter(docente => 
+      docente.nombre.toLowerCase().includes(inputValue) || docente.numero_documento.toLowerCase().includes(inputValue)
+    );
+
+    displayResultsDOCTS(filteredItems);
+  });
+
+  displayResultsDOCTS(listaDocentes);
+};
