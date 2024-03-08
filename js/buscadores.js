@@ -116,7 +116,7 @@ function buscadorDepartamentos(searchInput1, searchResults1){
           const li = document.createElement('li');
           li.textContent = `${result.nombre} ${result.apellido}`;
           li.addEventListener('click', function () {
-              searchInputDOCNT.value = `${result.nombre} ${result.apellido}`;
+              searchInputDOCNT.value = `${result.nombre}`;
               searchResultsDOCNT.innerHTML = '';
           });
           searchResultsDOCNT.appendChild(li);

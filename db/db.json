@@ -120,7 +120,7 @@
       "departamento_id": 2
     },
     {
-      "id": 3,
+      "id": "3",
       "tipo_documento": "Cedula de Ciudadania",
       "numero_documento": "09236712",
       "nombre": "Martha",
@@ -134,6 +134,14 @@
       "nombre": "Amanda",
       "apellido": "Reina",
       "departamento_id": 3
+    },
+    {
+      "id": "5",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "65178912",
+      "nombre": "Camilo",
+      "apellido": "Rodriguez",
+      "departamento_id": "4"
     }
   ],
   "alumnos": [
@@ -494,6 +502,168 @@
       "nombre": "Fisica Molecular",
       "codigo": "FIS-MOL",
       "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "4",
+      "nombre": "Inglés Avanzado",
+      "codigo": "ING-AVA",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "5",
+      "nombre": "Física Moderna",
+      "codigo": "FIS-MOD",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "6",
+      "nombre": "Análisis de Datos",
+      "codigo": "ANA-DAT",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "7",
+      "nombre": "Electromagnetismo",
+      "codigo": "ELE-MAG",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "8",
+      "nombre": "Redes de Computadoras",
+      "codigo": "RED-COM",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "9",
+      "nombre": "Diseño de Algoritmos",
+      "codigo": "DIS-ALG",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "10",
+      "nombre": "Matemáticas Discretas",
+      "codigo": "MAT-DIS",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "11",
+      "nombre": "Estadística Aplicada",
+      "codigo": "EST-APL",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "12",
+      "nombre": "Sistemas Operativos",
+      "codigo": "SIS-OP",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "13",
+      "nombre": "Bases de Datos",
+      "codigo": "BAS-DAT",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "14",
+      "nombre": "Inteligencia Artificial",
+      "codigo": "INT-ART",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "15",
+      "nombre": "Sistemas Distribuidos",
+      "codigo": "SIS-DIS",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "16",
+      "nombre": "Programación Web",
+      "codigo": "PROG-WEB",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "17",
+      "nombre": "Cálculo Diferencial",
+      "codigo": "CAL-DIF",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "18",
+      "nombre": "Física Clásica",
+      "codigo": "FIS-CLA",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "19",
+      "nombre": "Lógica Computacional",
+      "codigo": "LOG-COM",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "20",
+      "nombre": "Sistemas Embebidos",
+      "codigo": "SIS-EMB",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "21",
+      "nombre": "Desarrollo de Software",
+      "codigo": "DES-SOF",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "22",
+      "nombre": "Análisis Numérico",
+      "codigo": "ANA-NUM",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "23",
+      "nombre": "Probabilidad y Estadística",
+      "codigo": "PRO-EST",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "24",
+      "nombre": "Sistemas de Información",
+      "codigo": "SIS-INF",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "25",
+      "nombre": "Teoría de la Computación",
+      "codigo": "TEO-COM",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "26",
+      "nombre": "Estructuras de Datos",
+      "codigo": "EST-DAT",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "27",
+      "nombre": "Diseño de Interfaces",
+      "codigo": "DIS-INT",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "28",
+      "nombre": "Computación Gráfica",
+      "codigo": "COM-GRA",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "29",
+      "nombre": "Ingeniería de Software",
+      "codigo": "ING-SOF",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "30",
+      "nombre": "Redes Inalámbricas",
+      "codigo": "RED-INA",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
     }
   ],
   "salones": [
@@ -507,7 +677,7 @@
   ],
   "asignaturas": [
     {
-      "id": "1",
+      "id": 1,
       "curso_id": 1,
       "codigo": "PROG-AVA-PER-2024",
       "creditos": 4,
@@ -517,18 +687,13 @@
       "horario_clases": [
         {
           "dia": "Lunes",
-          "horario": "08:00",
-          "salon_id": 1
-        },
-        {
-          "dia": "Martes",
-          "horario": "08:00",
+          "horario": "06:00 - 08:00",
           "salon_id": 1
         }
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "curso_id": 2,
       "codigo": "ALG-LI-PER-2024",
       "creditos": 3,
@@ -537,48 +702,43 @@
       "programa_id": 2,
       "horario_clases": [
         {
-          "dia": "Lunes",
-          "hora_inicio": "10:00",
-          "hora_fin": "12:00",
-          "salon_id": 1
-        },
-        {
-          "dia": "Jueves",
-          "hora_inicio": "10:00",
-          "hora_fin": "12:00",
-          "salon_id": 1
+          "dia": "Martes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "1"
         }
       ]
     },
     {
-      "id": "1",
+      "id": 3,
       "curso_id": "3",
-      "codigo": "FISIC-MOLEC-PER-1-2024\"",
+      "codigo": "FISI-MOL-PER-2-2024",
       "creditos": "4",
-      "profesor_id": null,
+      "profesor_id": 3,
       "cupos_disponibles": "30",
       "programa_id": "5",
-      "horario_clases": []
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "06:00 - 08:00",
+          "salon_id": "1"
+        }
+      ]
     },
     {
-      "id": "1",
-      "curso_id": "3",
-      "codigo": "FISIC-MOLEC-PER-1-2024\"",
-      "creditos": "4",
-      "profesor_id": null,
-      "cupos_disponibles": "32",
-      "programa_id": "5",
-      "horario_clases": []
-    },
-    {
-      "id": "1",
-      "curso_id": "3",
-      "codigo": "FISIC-MOLEC-PER-1-2024\"",
-      "creditos": "4",
-      "profesor_id": null,
-      "cupos_disponibles": "4",
-      "programa_id": "5",
-      "horario_clases": []
+      "id": 4,
+      "curso_id": 13,
+      "codigo": "BAS-DATS-PER-1-2024",
+      "creditos": "8",
+      "profesor_id": 5,
+      "cupos_disponibles": "30",
+      "programa_id": 2,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "1"
+        }
+      ]
     }
   ],
   "matriculas": [

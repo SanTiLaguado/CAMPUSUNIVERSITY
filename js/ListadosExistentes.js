@@ -104,7 +104,7 @@ const mostrarListaProg = async () => {
 
   ListadoProgramas.innerHTML = `
     <div class="search-container.prog">
-      <input type="text" id="search-input-prog" placeholder="Buscar Programas...">
+      <input type="text" class="buscador-listasEx" id="search-input-prog" placeholder="Buscar Programas...">
       <ul id="search-results-prog"></ul>
     </div>
   `;
@@ -150,7 +150,7 @@ const mostrarListaPeriod = async () => {
 
   ListadoPeriodos.innerHTML = `
     <div class="search-container.period">
-      <input type="text" id="search-input-period" placeholder="Buscar Periodos...">
+      <input type="text" class="buscador-listasEx" id="search-input-period" placeholder="Buscar Periodos...">
       <ul id="search-results-period"></ul>
     </div>
   `;
@@ -196,7 +196,7 @@ const mostrarListaTarifas = async () => {
 
   listadoTarifas.innerHTML = `
     <div class="search-container.tarifas">
-      <input type="text" id="search-input-tarifas" placeholder="Buscar Periodos...">
+      <input type="text" class="buscador-listasEx" id="search-input-tarifas" placeholder="Buscar Periodos...">
       <ul id="search-results-tarifas"></ul>
     </div>
   `;
@@ -242,7 +242,7 @@ const mostrarListaDepts = async () => {
 
   listadoDepartamentos.innerHTML = `
     <div class="search-container.depts">
-      <input type="text" id="search-input-Dept" placeholder="Buscar Departamentos...">
+      <input type="text" class="buscador-listasEx" id="search-input-Dept" placeholder="Buscar Departamentos...">
       <ul id="search-results-Dept"></ul>
     </div>
   `;
@@ -288,7 +288,7 @@ const mostrarListaSalones = async () => {
 
   listadoSalones.innerHTML = `
     <div class="search-container.salones">
-      <input type="text" id="search-input-salones" placeholder="Buscar Salones...">
+      <input type="text" class="buscador-listasEx" id="search-input-salones" placeholder="Buscar Salones...">
       <ul id="search-results-salones"></ul>
     </div>
   `;

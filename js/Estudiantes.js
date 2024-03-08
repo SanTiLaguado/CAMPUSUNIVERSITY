@@ -197,8 +197,8 @@ const mostrarListaEst = async () => {
 
   busquedaEstudiantes.innerHTML = `
     <div class="search-container.est">
-      <input type="text" id="search-input-EST" placeholder="Buscar Estudiantes...">
-      <ul id="search-results-EST"></ul>
+      <input type="text" class="input-gestion" id="search-input-EST" placeholder="Buscar Estudiantes...">
+      <ul class="results-lists" id="search-results-EST"></ul>
     </div>
   `;
 

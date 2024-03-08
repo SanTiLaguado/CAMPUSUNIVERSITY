@@ -138,8 +138,8 @@ const crearDocente= async ()=>{
   
     busquedaDocentes.innerHTML = `
       <div class="search-container.docnts">
-        <input type="text" id="search-input-docnts" placeholder="Buscar Docentes...">
-        <ul id="search-results-docnts"></ul>
+        <input type="text" class="input-gestion" id="search-input-docnts" placeholder="Buscar Docentes...">
+        <ul class="results-lists" id="search-results-docnts"></ul>
       </div>
     `;
 

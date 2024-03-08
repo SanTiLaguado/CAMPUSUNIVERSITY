@@ -66,52 +66,23 @@ const cargarFormularioAsignaturas = async () => {
             <ul id="search-results-ProgramaAsign"></ul>
           </div>
           <label for="HorarioAsign">Seleccione un Horario:</label>
-            <div id="horarios">
+            <div id="horarioscont">
               <label for="dia-1">Día:</label>
-              <select class="HorarioDia" required>
+              <select id="HorarioDia" required>
                 ${cargardias()}
               </select>
               <label for="hora-1">Horario:</label>
-              <select class="HorarioHoras" required>
+              <select id="HorarioHoras" required>
                 ${cargarHorarios()}
               </select>
               <label for="salon-1">Salón:</label>
-              <select class="HorarioSalon" required>
+              <select id="HorarioSalon" required>
                 ${selectSalones()}
               </select>
             </div>
-            <button type="button" id="agregarHorario">Agregar otro horario</button>
-
-          <button type="button" onclick="crearAsignatura()">Crear Asignatura</button>
+            <button type="button" onclick="crearAsignatura()">Crear Asignatura</button>
       </form>  
   `;
-
-  const horariosContainer = document.getElementById('horarios');
-  const agregarHorarioBtn = document.getElementById('agregarHorario');
-  let horarioCount = 1;
-
-  agregarHorarioBtn.addEventListener('click', function () {
-    horarioCount++;
-
-    const nuevoHorario = document.createElement('div');
-    nuevoHorario.classList.add('horario');
-    nuevoHorario.innerHTML = `
-          <label for="dia-${horarioCount}">Día:</label>
-          <select name="dia[]" id="dia-${horarioCount}" required>
-          ${cargardias()}
-          </select>
-          <label for="hora-${horarioCount}">Horario:</label>
-          <select name="hora[]" id="hora-${horarioCount}" required>
-          ${cargarHorarios()}
-          </select>
-          <label for="salon-${horarioCount}">Salón:</label>
-          <select name="salon[]" id="salon-${horarioCount}" required>
-          ${selectSalones()}
-          </select>
-      `;
-
-    horariosContainer.appendChild(nuevoHorario);
-  });
 
   buscadorDocentes('search-input-DocenteAsign', 'search-results-DocenteAsign')
   buscadorCursos('search-input-cursoasign', 'search-results-cursoasign')
@@ -119,6 +90,7 @@ const cargarFormularioAsignaturas = async () => {
 }
 
 const crearAsignatura = async () => {
+  await cargarAsignaturas();
 
   const cursoInput = document.getElementById('search-input-cursoasign');
   const codigoInput = document.getElementById('codigoASIGN');
@@ -126,6 +98,9 @@ const crearAsignatura = async () => {
   const DocenteInput = document.getElementById('search-input-DocenteAsign');
   const cuposInput = document.getElementById('cuposAsign');
   const ProgramaAInput = document.getElementById('search-input-ProgramaAsign');
+  const DiaInput = document.getElementById('HorarioDia');
+  const HoraInput = document.getElementById('HorarioHoras');
+  const SalonInput = document.getElementById('HorarioSalon');
 
   const cursoAs = cursoInput.value;
   const codigoAs = codigoInput.value;
@@ -133,82 +108,39 @@ const crearAsignatura = async () => {
   const DocenteAs = DocenteInput.value;
   const cuposAs = cuposInput.value;
   const programaAs = ProgramaAInput.value;
+  const Dia = DiaInput.value;
+  const Hora = HoraInput.value;
+  const Salon = SalonInput.value;
 
-  const horariosAsArray = [];
-  const horariosContainer = document.getElementById('horarios');
-  const horarioElements = horariosContainer.querySelectorAll('.horario');
-
-  horarioElements.forEach((horarioElement, index) => {
-    const dia = horarioElement.querySelector(`#dia-${index + 1}`).value;
-    const hora = horarioElement.querySelector(`#hora-${index + 1}`).value;
-    const salon = horarioElement.querySelector(`#salon-${index + 1}`).value;
-
-    horariosAsArray.push({
-      dia,
-      horario: hora,
-      salon_id: salon
+  const Horarios = {dia: Dia, horario: Hora, salon_id: Salon}
+ 
+  const horarioOcupado = listaAsignaturas.some(asignatura => {
+    return asignatura.horario_clases.some(horario => {
+      return horario.dia === Dia && horario.horario === Hora && horario.salon_id === Salon;
     });
   });
-
-  async function relacionaridcurso(cursoAs) {
-    const cursoselAs = listaCursos.find(curso => curso.nombre === cursoAs);
-
-    if (cursoselAs) {
-      const CursoASID = cursoselAs.id;
-      console.log('ID del programa seleccionado:', CursoASID);
-      return CursoASID;
-    } else {
-      console.log('Programa no encontrado en el JSON de programas');
-      return null;
-    }
+  
+  if (horarioOcupado) {
+    alert('El horario seleccionado ya está ocupado. Por favor elija otro.');
+    return null;
   }
 
-  async function relacionaridocente(DocenteAs) {
-    const cleanDocenteAs = DocenteAs.trim().toLowerCase(); 
-
-    const putas = listaDocentes.find(docente => docente.nombre.trim().toLowerCase() === cleanDocenteAs);
-
-    if (putas) {
-      const DocenteASID = putas.id;
-      console.log('ID del docente seleccionado:', DocenteASID);
-      return DocenteASID;
-    } else {
-      console.log('Docente no encontrado en la lista de docentes');
-      return null;
-    }
+  const getId = (entity, list) => {
+    const result = list.find(element => entity === element.nombre);
+    return result ? result.id : "Id no encontrada o la lista no existe";
   }
-
-
-  async function relacionaridprograma(programaAs) {
-    const programaselAs = listaProgramas.find(programa => programa.nombre === programaAs);
-
-    if (programaselAs) {
-      const ProgramaASID = programaselAs.id;
-      console.log('ID del programa seleccionado:', ProgramaASID);
-      return ProgramaASID;
-    } else {
-      console.log('Programa no encontrado en el JSON de programas');
-      return null;
-    }
-  }
-
-  const nuevoidAsign = (listaAsignaturas.length + 1).toString();
-  const CursoIDAS = await relacionaridcurso(cursoAs);
-  const DocenteIDAS = await relacionaridocente(DocenteAs);
-  const ProgramaIDAS = await relacionaridprograma(programaAs);
 
   const nuevaAsignatura = {
-    id: nuevoidAsign,
-    curso_id: CursoIDAS,
+    id: Number(listaAsignaturas.length + 1),
+    curso_id: Number(getId(cursoAs, listaCursos)),
     codigo: codigoAs,
     creditos: creditosAs,
-    profesor_id: DocenteIDAS,
+    profesor_id: Number(getId(DocenteAs, listaDocentes)),
     cupos_disponibles: cuposAs,
-    programa_id: ProgramaIDAS,
-    horario_clases: horariosAsArray
-  }
+    programa_id: Number(getId(programaAs, listaProgramas)),
+    horario_clases: [Horarios],
+  };
 
-  await cargarAsignaturas();
   await guardarAsignatura(nuevaAsignatura);
   await cargarCursos();
 
@@ -240,3 +172,49 @@ const guardarAsignatura = async (nuevaAsignatura) => {
     console.error("Error al cargar Asignaturas", error.message);
   }
 }
+
+const mostrarListaAsignaturas = async () => {
+  await cargarAsignaturas()
+
+  
+  const busquedaAsignaturas = document.getElementById('busqueda-Asignaturas');  
+
+  busquedaAsignaturas.innerHTML = `
+    <div class="search-container.Asignaturas">
+      <input type="text" class="input-gestion" id="search-input-Asignaturas" placeholder="Buscar Asignaturas...">
+      <ul class="results-lists" id="search-results-Asignaturas"></ul>
+    </div>
+  `;
+
+  const searchInputAsignaturas = document.getElementById('search-input-Asignaturas');
+  const searchResultsAsignaturas = document.getElementById('search-results-Asignaturas');
+
+  function displayResultsAsignaturas(results) {
+    searchResultsAsignaturas.innerHTML = '';
+
+    results.forEach(result => {
+      const li = document.createElement('li');
+      li.textContent = `ID: ${result.id}, Codigo: ${result.codigo}, Horario: ${result.horario_clases}, Creditos: ${result.creditos}, Docente ID: ${result.profesor_id}, Programa ID: ${result.programa_id}, Cupos: ${result.cupos_disponibles}`;
+      searchResultsAsignaturas.appendChild(li);
+    });
+
+  if (results.length === 0) {
+    const li = document.createElement('li');
+    li.textContent = 'No se encontraron Asignaturas';
+    searchResultsAsignaturas.appendChild(li);
+    return;
+  }
+}
+
+searchInputAsignaturas.addEventListener('input', function() {
+  const inputValue = this.value;
+  const filteredItems = listaAsignaturas.filter(asignatura => 
+    asignatura.codigo.includes(inputValue)
+  );
+
+  displayResultsAsignaturas(filteredItems);
+});
+
+
+  displayResultsAsignaturas(listaAsignaturas);
+};
