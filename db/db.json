@@ -409,6 +409,14 @@
       "nombre": "",
       "apellido": "",
       "departamento_id": 0
+    },
+    {
+      "id": "26",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "",
+      "nombre": "",
+      "apellido": "",
+      "departamento_id": 0
     }
   ],
   "alumnos": [

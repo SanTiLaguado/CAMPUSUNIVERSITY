@@ -21,7 +21,7 @@ const cargarMatriculas= async()=>{
 
 const cargarFormularioMatriculas=()=>{
     const MatriculasForm = document.getElementById('Matriculas-form');
-    MatriculasForm.innerHTML = `<h2>Crear Matriculas</h2>
+    MatriculasForm.innerHTML = `<h2>Crear Matriculas</h2> 
           <form>
             <div class="search-container.EstMatricula">
               <input type="text" id="search-input-EstMatricula" placeholder="Buscar Estudiantes...">
@@ -98,15 +98,14 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
         cursoN= getName(cursoID, listaCursos)
         
         const asignaturaInfo = document.createElement('li');
-        asignaturaInfo.textContent = `ID Curso: ${asignatura.curso_id}, Curso: ${cursoN}, Horario: ${asignatura.horario_clases} `;
+        asignaturaInfo.textContent = `ID: ${asignatura.curso_id}, Curso: ${cursoN}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
 
         const botonAgregar = document.createElement('button');
         botonAgregar.textContent = 'Añadir';
         botonAgregar.classList.add('boton-carrito-matriculas'); 
 
         botonAgregar.addEventListener('click', function() {
-            // LOGICA CARRITO
-            console.log(`Añadido al carrito: ${asignatura.curso_id}`);
+            agregarAlCarrito(asignatura);
         });
 
         asignaturaInfo.appendChild(botonAgregar); 
@@ -166,4 +165,25 @@ const mostrarListaMatriculas = async () => {
   
   displayResultsMatriculas(listaMatriculas);
 };
+
+let carritoMatriculas = [];
+
+function agregarAlCarrito(asignatura) {
+    carritoMatriculas.push(asignatura);
+    console.log(`Asignatura añadida al carrito: ${asignatura.curso_id}`);
+    mostrarCarrito();
+}
+
+function mostrarCarrito() {
+  const listaCarrito = document.getElementById('lista-carrito');
+  listaCarrito.innerHTML = '';
+
+  carritoMatriculas.forEach(asignatura => {
+      const li = document.createElement('li');
+      li.textContent = `ID: ${asignatura.curso_id}, Curso: ${cursoN}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
+
+      listaCarrito.appendChild(li);
+  });
+}
+
 
