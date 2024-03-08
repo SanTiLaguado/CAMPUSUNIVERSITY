@@ -32,7 +32,7 @@ const cargarFormularioEstudiantes=()=>{
             <select id="sexoest" required>
                 ${cargarsexos()}
             </select> 
-          <label for="nacimientoest">Fecha de Nacimiento:</label>
+          <label for="nacimientoest">Fecha de Nacimiento: DIA-MES-AÑO</label>
           <input type="text" id="nacimientoest" required>
           <label for="search-input-docs">Tipo de Documento:</label>
             <select id="tipodocumentoest" required>

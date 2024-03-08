@@ -49,7 +49,7 @@ const cargarFormularioAsignaturas = async () => {
             <input type="text" id="search-input-cursoasign" placeholder="Buscar Cursos...">
             <ul id="search-results-cursoasign"></ul>
           </div>
-          <label for="codigoASIGN">Codigo de Asignatura:</label>
+          <label for="codigoASIGN">Codigo de Asignatura: (NOM-BRE-PERIODO-AÑO)</label>
           <input type="text" id="codigoASIGN" required>
           <label for="cantcreditosasign">Ingrese cantidad de Creditos:</label>
           <input type="number" id="cantcreditosasign" required>
