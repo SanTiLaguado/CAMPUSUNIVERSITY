@@ -22,7 +22,7 @@ const cargarDocentes= async()=>{
 const cargarFormularioDocentes=()=>{
     const DocentesForm = document.getElementById('Docentes-form');
     DocentesForm.innerHTML = `<h2>Crear Docentes</h2>
-      <form onsubmit="crearDocente(event); popupdocentes();">
+      <form>
           <label for="nombreDocente">Nombre del Docente:</label>
           <input type="text" id="nombreDocente" required>
           <label for="apellidoDocente">Apellido del Docente:</label>
@@ -39,15 +39,16 @@ const cargarFormularioDocentes=()=>{
             <input type="text" id="search-input-dptodocnt" placeholder="Buscar Programas...">
             <ul id="search-results-dptodocnt"></ul>
           </div>
-          <button type="submit">Crear Asignatura</button>
+          <a id="boton-crear-docente" href="#">Crear Docente</a>
       </form>
   `;
   
+  document.getElementById("boton-crear-docente").addEventListener("click",crearDocente);
+  document.getElementById("boton-crear-docente").addEventListener("click",popupdocentes);
   buscadorDepartamentos('search-input-dptodocnt', 'search-results-dptodocnt');
 }
 
-const crearDocente= async (event)=>{
-  event.preventDefault();
+const crearDocente= async ()=>{
   const nombreInput=document.getElementById('nombreDocente');
   const apellidoInput=document.getElementById('apellidoDocente');
   const tipodocInput=document.getElementById('tipodocumentodocnte');

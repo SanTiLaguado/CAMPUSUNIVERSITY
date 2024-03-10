@@ -68,7 +68,7 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
   }
 
   const getName = (entity, list) => {
-      const result = list.find(element => entity === element.id);
+      const result = list.find(element => entity == element.id);
       return result ? result.nombre : "Nombre no encontrado o la lista no existe";
     }
      
@@ -94,13 +94,13 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
     AsignDispDiv.innerHTML = '<h2>Asignaturas Disponibles</h2>';
 
     asignaturasFiltradas.forEach(asignatura => {
-        cursoID = asignatura.curso_id
+        cursoID = Number(asignatura.curso_id)
         cursoN= getName(cursoID, listaCursos)
         
         const asignaturaInfo = document.createElement('li');
         asignaturaInfo.textContent = `ID: ${asignatura.curso_id}, Curso: ${cursoN}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
-
-        const botonAgregar = document.createElement('button');
+        console.log(asignatura)
+        const botonAgregar = document.createElement('a');
         botonAgregar.textContent = 'Añadir';
         botonAgregar.classList.add('boton-carrito-matriculas'); 
 
@@ -142,4 +142,45 @@ function mostrarCarrito() {
   });
 }
 
+const mostrarlistaMatriculas = async () => {
+    await cargarMatriculas();
 
+    const busquedaMatriculas = document.getElementById('busqueda-Matriculas');
+
+    busquedaMatriculas.innerHTML = `
+    <div class="search-container.matriculas">
+      <input type="text" class="input-gestion" id="search-input-MATR" placeholder="Buscar Matriculas...">
+      <ul class="results-lists" id="search-results-MATR"></ul>
+    </div>
+  `;
+
+  const searchInputMATR = document.getElementById('search-input-MATR');
+  const searchResultsMATR = document.getElementById('search-results-MATR');
+
+    function displayResultsMATR(results) {
+        searchInputMATR.innerHTML = '';
+
+        results.forEach(result => {
+            const li = document.createElement('li');
+            li.textContent = `ID: ${result.id}, Estudiante: ${result.estudiante_id} ${result.estudianteN}, Asignatura: ${result.asignatura_id}`
+            searchResultsMATR.appendChild(li);
+        });
+
+        if (results.length === 0) {
+            const li = document.createElement('li');
+            li.textContent = 'No se encontraron Matriculas';
+            searchResultsMATR.appendChild(li);
+            return;
+          }
+    }
+
+    searchInputMATR.addEventListener('input', function() {
+        const inputValueMat = this.value.toLowerCase();
+        const filteredMatr = listaMatriculas.filter(matricula => matricula.id.toLowerCase().includes(inputValueMat)
+        );
+
+        displayResultsMATR(filteredMatr);
+    });
+
+    displayResultsMATR(listaMatriculas)
+};

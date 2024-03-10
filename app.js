@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     cargarFormularioAsignaturas();
     await mostrarListaAsignaturas();
     cargarFormularioMatriculas();
+    mostrarlistaMatriculas();
 
 
 
