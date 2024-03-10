@@ -23,7 +23,7 @@ const cargarEstudiantes= async()=>{
 const cargarFormularioEstudiantes=()=>{
     const EstudiantesForm = document.getElementById('Estudiantes-form');
     EstudiantesForm.innerHTML = `<h2>Crear Estudiantes</h2>
-      <form>
+      <form onsubmit="crearEstudiante(event)">
           <label for="nombreEstudiante">Nombre del Estudiante:</label>
           <input type="text" id="nombreEstudiante" required>
           <label for="apellidoEstudiante">Apellido del Estudiante:</label>
@@ -51,7 +51,7 @@ const cargarFormularioEstudiantes=()=>{
             <input type="text" id="search-input-docs" placeholder="Buscar Programas...">
             <ul id="search-results-docs"></ul>
           </div>
-          <button type="button" onclick="crearEstudiante()">Crear Estudiante</button>
+          <button type="submit">Crear Estudiante</button>
           <!-- Aquí se puede añadir más funcionalidad, como modificar y eliminar clientes -->
       </form>
   `;
@@ -87,7 +87,8 @@ const cargarFormularioEstudiantes=()=>{
   });
 }
 
-const crearEstudiante= async ()=>{
+const crearEstudiante= async (event)=>{
+  event.preventDefault();
   const nombreInput=document.getElementById('nombreEstudiante');
   const apellidoInput=document.getElementById('apellidoEstudiante');
   const sexoInput=document.getElementById('sexoest');

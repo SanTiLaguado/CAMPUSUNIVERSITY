@@ -43,7 +43,7 @@ const cargarFormularioAsignaturas = async () => {
   await cargarCursos();
   const AsignaturasForm = document.getElementById('Asignaturas-form');
   AsignaturasForm.innerHTML = `<h2>Crear Asignaturas</h2>
-      <form>
+      <form onsubmit="crearAsignatura(event)">
           <label for="CursoAsignatura">Seleccione el Curso:</label>
           <div class="search-container.cursoasign">
             <input type="text" id="search-input-cursoasign" placeholder="Buscar Cursos...">
@@ -80,7 +80,7 @@ const cargarFormularioAsignaturas = async () => {
                 ${selectSalones()}
               </select>
             </div>
-            <button type="button" onclick="crearAsignatura()">Crear Asignatura</button>
+            <button type="submit">Crear Asignatura</button>
       </form>  
   `;
 
@@ -89,9 +89,9 @@ const cargarFormularioAsignaturas = async () => {
   buscadorProgramas('search-input-ProgramaAsign', 'search-results-ProgramaAsign')
 }
 
-const crearAsignatura = async () => {
+const crearAsignatura = async (event) => {
+  event.preventDefault();
   await cargarAsignaturas();
-
   const cursoInput = document.getElementById('search-input-cursoasign');
   const codigoInput = document.getElementById('codigoASIGN');
   const creditosInput = document.getElementById('cantcreditosasign');
@@ -194,7 +194,7 @@ const mostrarListaAsignaturas = async () => {
 
     results.forEach(result => {
       const li = document.createElement('li');
-      li.textContent = `ID: ${result.id}, Codigo: ${result.codigo}, Horario: ${result.horario_clases}, Creditos: ${result.creditos}, Docente ID: ${result.profesor_id}, Programa ID: ${result.programa_id}, Cupos: ${result.cupos_disponibles}`;
+      li.textContent = `ID: ${result.id}, Codigo: ${result.codigo}, Horario: ${result.horario_clases[0].dia}, ${result.horario_clases[0].horario}, Creditos: ${result.creditos}, Docente ID: ${result.profesor_id}, Programa ID: ${result.programa_id}, Cupos: ${result.cupos_disponibles}`;
       searchResultsAsignaturas.appendChild(li);
     });
 

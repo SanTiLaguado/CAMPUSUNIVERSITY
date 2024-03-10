@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     await mostrarListaAsignaturas();
     cargarFormularioMatriculas();
 
+
+
     const links = document.querySelectorAll('.navigation a');
     links.forEach(link => {
         link.addEventListener('click', event => {

@@ -122,50 +122,6 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
   });
 }
 
-const mostrarListaMatriculas = async () => {
-  await cargarMatriculas();
-  
-  const busquedaMatriculas = document.getElementById('busqueda-Matriculas');  
-  
-  busquedaMatriculas.innerHTML = `
-    <div class="search-container-Matriculas">
-      <input type="text" class="input-gestion" id="search-input-Matriculas" placeholder="Buscar Matriculas por Estudiante...">
-      <ul class="results-lists" id="search-results-Matriculas"></ul>
-    </div>
-  `;
-  
-  const searchInputMatriculas = document.getElementById('search-input-Matriculas');
-  const searchResultsMatriculas = document.getElementById('search-results-Matriculas');
-  
-  function displayResultsMatriculas(results) {
-    searchResultsMatriculas.innerHTML = '';
-  
-    if (results.length === 0) {
-      const li = document.createElement('li');
-      li.textContent = 'No se encontraron Matriculas';
-      searchResultsMatriculas.appendChild(li);
-      return;
-    }
-    
-    results.forEach(result => {
-      const li = document.createElement('li');
-      li.textContent = `ID: ${result.id} `;
-      searchResultsMatriculas.appendChild(li);
-    });
-  }
-  
-  searchInputMatriculas.addEventListener('input', function() {
-    const inputValue = this.value;
-    const filteredItems = listaMatriculas.filter(matricula => 
-      matricula.estudiante_id.includes(inputValue)
-    );
-  
-    displayResultsMatriculas(filteredItems);
-  });
-  
-  displayResultsMatriculas(listaMatriculas);
-};
-
 let carritoMatriculas = [];
 
 function agregarAlCarrito(asignatura) {

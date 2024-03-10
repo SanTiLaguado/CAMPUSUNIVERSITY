@@ -405,18 +405,66 @@
     {
       "id": "25",
       "tipo_documento": "Cedula de Ciudadania",
-      "numero_documento": "",
-      "nombre": "",
-      "apellido": "",
-      "departamento_id": 0
+      "numero_documento": "12564512",
+      "nombre": "Amanda",
+      "apellido": "Reina",
+      "departamento_id": 2
     },
     {
       "id": "26",
       "tipo_documento": "Cedula de Ciudadania",
-      "numero_documento": "",
-      "nombre": "",
-      "apellido": "",
-      "departamento_id": 0
+      "numero_documento": "1234124",
+      "nombre": "Amanda",
+      "apellido": "Reina",
+      "departamento_id": 1
+    },
+    {
+      "id": "27",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "123567823",
+      "nombre": "asd",
+      "apellido": "estas",
+      "departamento_id": 2
+    },
+    {
+      "id": "28",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "124567422",
+      "nombre": "sadwas",
+      "apellido": "watv",
+      "departamento_id": 2
+    },
+    {
+      "id": "29",
+      "tipo_documento": "Cedula de Extrangeria",
+      "numero_documento": "18765431234",
+      "nombre": "Amanda",
+      "apellido": "estas",
+      "departamento_id": 2
+    },
+    {
+      "id": "30",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "125632124",
+      "nombre": "Amanda",
+      "apellido": "estas",
+      "departamento_id": 2
+    },
+    {
+      "id": "31",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "1235786543",
+      "nombre": "Amanda",
+      "apellido": "estasasda",
+      "departamento_id": 2
+    },
+    {
+      "id": "32",
+      "tipo_documento": "Cedula de Ciudadania",
+      "numero_documento": "123141",
+      "nombre": "asd",
+      "apellido": "estas",
+      "departamento_id": 1
     }
   ],
   "alumnos": [
@@ -1069,19 +1117,6 @@
       "fecha_nacimiento": "2039-02-02",
       "sexo": "Femenino",
       "programa_id": "2"
-    },
-    {
-      "id": "51",
-      "nombre": "",
-      "apellido": "",
-      "tipo_documento": "Cedula de Ciudadania",
-      "numero_documento": "",
-      "ciudad_residencia": "",
-      "direccion": "",
-      "telefono": "",
-      "fecha_nacimiento": "",
-      "sexo": "Masculino",
-      "programa_id": null
     }
   ],
   "cursos": [
@@ -1410,7 +1445,7 @@
   ],
   "asignaturas": [
     {
-      "id": "1",
+      "id": 1,
       "curso_id": 1,
       "codigo": "PROG-AVA-PER-2024",
       "creditos": 4,
@@ -1426,7 +1461,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "curso_id": 2,
       "codigo": "ALG-LI-PER-2024",
       "creditos": 3,
@@ -1442,8 +1477,8 @@
       ]
     },
     {
-      "id": "3",
-      "curso_id": "3",
+      "id": 3,
+      "curso_id": 3,
       "codigo": "FISI-MOL-PER-2-2024",
       "creditos": "4",
       "profesor_id": 3,
@@ -1458,7 +1493,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "curso_id": 13,
       "codigo": "BAS-DATS-PER-1-2024",
       "creditos": "8",

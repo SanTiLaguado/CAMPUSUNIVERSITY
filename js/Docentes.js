@@ -22,7 +22,7 @@ const cargarDocentes= async()=>{
 const cargarFormularioDocentes=()=>{
     const DocentesForm = document.getElementById('Docentes-form');
     DocentesForm.innerHTML = `<h2>Crear Docentes</h2>
-      <form>
+      <form onsubmit="crearDocente(event); popupdocentes();">
           <label for="nombreDocente">Nombre del Docente:</label>
           <input type="text" id="nombreDocente" required>
           <label for="apellidoDocente">Apellido del Docente:</label>
@@ -39,15 +39,14 @@ const cargarFormularioDocentes=()=>{
             <input type="text" id="search-input-dptodocnt" placeholder="Buscar Programas...">
             <ul id="search-results-dptodocnt"></ul>
           </div>
-          <button id="button-doc" type="button" onclick="crearDocente(); popupdocentes();">Crear Docente</button>
-          <!-- Aquí se puede añadir más funcionalidad, como modificar y eliminar clientes -->
+          <button type="submit">Crear Asignatura</button>
       </form>
   `;
   
   buscadorDepartamentos('search-input-dptodocnt', 'search-results-dptodocnt');
 }
 
-const crearDocente= async ()=>{
+const crearDocente= async (event)=>{
   event.preventDefault();
   const nombreInput=document.getElementById('nombreDocente');
   const apellidoInput=document.getElementById('apellidoDocente');
@@ -91,7 +90,7 @@ const crearDocente= async ()=>{
   await limpiarFormularioDOCTS();
 
   console.log("Docente Creado éxito!")
-  return nuevoDocente;
+  return false, nuevoDocente;
 }
 
 const limpiarFormularioDOCTS = () => {
