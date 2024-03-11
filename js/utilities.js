@@ -1,3 +1,13 @@
+const cargarperiodos=()=>{
+    let options= ''
+    for (let i = 0; i < listaPeriodos.length; i++){
+        options += `<option value="${listaPeriodos[i].codigo}">${listaPeriodos[i].codigo}</option>`
+    }
+    return options
+}
+
+
+
 const tiposdedocumento = ["Cedula de Ciudadania", "Cedula de Extrangeria", ]
 
 const cargartiposdocs=()=>{

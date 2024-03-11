@@ -23,6 +23,10 @@ const cargarFormularioMatriculas=()=>{
     const MatriculasForm = document.getElementById('Matriculas-form');
     MatriculasForm.innerHTML = `<h2>Crear Matriculas</h2> 
           <form>
+            <label for="PeriodoMatricula">Periodo:</label>
+              <select id="PeriodoMatricula" required>
+                  ${cargarperiodos()}
+              </select>
             <div class="search-container.EstMatricula">
               <input type="text" id="search-input-EstMatricula" placeholder="Buscar Estudiantes...">
               <ul id="search-results-EstMatricula"></ul>
@@ -35,10 +39,10 @@ const cargarFormularioMatriculas=()=>{
       </form>
   `;
 
-  CargarInformacionparaEst('search-input-EstMatricula', 'search-results-EstMatricula', 'infoEstudianteSel', 'AsignaturasDispEst')
+  CargarInformacionparaEst('search-input-EstMatricula', 'search-results-EstMatricula', 'infoEstudianteSel', 'AsignaturasDispEst', 'PeriodoMatricula')
 }
 
-function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, asignDispDiv) {
+function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, asignDispDiv, PeriodoSelec) {
   const searchInputEstudianteM = document.getElementById(searchInput4);
   const searchResultsEstudianteM = document.getElementById(searchResults4);
   const InfoEstDIv = document.getElementById(infoEstDIvId);
@@ -55,13 +59,17 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
       }
 
       results.forEach(result => {
+        console.log(result)
           const li = document.createElement('li');
           li.textContent = `${result.nombre} ${result.apellido}`;
           li.addEventListener('click', async function () {
               searchInputEstudianteM.value = `${result.numero_documento}`;
               searchResultsEstudianteM.innerHTML = '';
               const ProgramaID = await mostrarInfoEstM(result);
-              mostrarAsignDisp(ProgramaID);
+              const PeriodoSel = document.getElementById(PeriodoSelec)
+              const periodoSelecc = PeriodoSel.value;
+              console.log(periodoSelecc)
+              mostrarAsignDisp(ProgramaID, periodoSelecc);
           });
           searchResultsEstudianteM.appendChild(li);
       });
@@ -85,11 +93,10 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
       return ProgramaID;
   }
 
-  async function mostrarAsignDisp(program) {
+  async function mostrarAsignDisp(program, periodo) {
     await cargarCursos();
     ProgramaRel = Number(program);
-    const asignaturasFiltradas = listaAsignaturas.filter(asignatura => asignatura.programa_id === ProgramaRel);
-    console.log(ProgramaRel)
+    const asignaturasFiltradas = listaAsignaturas.filter(asignatura => asignatura.programa_id == ProgramaRel && asignatura.periodo == periodo);
 
     AsignDispDiv.innerHTML = '<h2>Asignaturas Disponibles</h2>';
 
@@ -99,19 +106,20 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
         
         const asignaturaInfo = document.createElement('li');
         asignaturaInfo.textContent = `ID: ${asignatura.curso_id}, Curso: ${cursoN}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
-        console.log(asignatura)
         const botonAgregar = document.createElement('a');
         botonAgregar.textContent = 'Añadir';
         botonAgregar.classList.add('boton-carrito-matriculas'); 
 
-        botonAgregar.addEventListener('click', function() {
+        botonAgregar.addEventListener('click', async function() {
             agregarAlCarrito(asignatura);
+            await calculartotales(asignatura);
         });
 
         asignaturaInfo.appendChild(botonAgregar); 
         AsignDispDiv.appendChild(asignaturaInfo);
     });
-  }
+}
+
 
   searchInputEstudianteM.addEventListener('input', function () {
       const inputValue = this.value.toLowerCase();
@@ -123,9 +131,14 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
 }
 
 let carritoMatriculas = [];
+let totalcarrito= 0;
+let listaIDs = [];
 
 function agregarAlCarrito(asignatura) {
     carritoMatriculas.push(asignatura);
+    let idsAsCart = Number(asignatura.curso_id);
+    listaIDs.push(idsAsCart);
+    console.log(listaIDs)
     console.log(`Asignatura añadida al carrito: ${asignatura.curso_id}`);
     mostrarCarrito();
 }
@@ -142,45 +155,117 @@ function mostrarCarrito() {
   });
 }
 
-const mostrarlistaMatriculas = async () => {
-    await cargarMatriculas();
 
-    const busquedaMatriculas = document.getElementById('busqueda-Matriculas');
+const botonEnvMatr = document.getElementById("botonenvmatr");
+botonEnvMatr.addEventListener('click', async function() {
+  crearMatricula();
+});
 
-    busquedaMatriculas.innerHTML = `
-    <div class="search-container.matriculas">
-      <input type="text" class="input-gestion" id="search-input-MATR" placeholder="Buscar Matriculas...">
-      <ul class="results-lists" id="search-results-MATR"></ul>
-    </div>
-  `;
 
-  const searchInputMATR = document.getElementById('search-input-MATR');
-  const searchResultsMATR = document.getElementById('search-results-MATR');
+const mostrarListaMatriculas = async () => {
+  await cargarMatriculas
+  console.log(listaMatriculas)
+  const listaElemento = document.getElementById("Listado-Matriculas");
 
-    function displayResultsMATR(results) {
-        searchInputMATR.innerHTML = '';
+  listaMatriculas.forEach(matricula => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `ID: ${matricula.id}, Estudiante: ${matricula.estudianteN}, Asig. Matriculadas: ${matricula.asignaturas_id}, Total Pagado: $${matricula.precio} `;
+    listaElemento.appendChild(listItem);
+  });
+}
 
-        results.forEach(result => {
-            const li = document.createElement('li');
-            li.textContent = `ID: ${result.id}, Estudiante: ${result.estudiante_id} ${result.estudianteN}, Asignatura: ${result.asignatura_id}`
-            searchResultsMATR.appendChild(li);
-        });
+const cuentacarrito = document.getElementById("cuenta-carrito");
 
-        if (results.length === 0) {
-            const li = document.createElement('li');
-            li.textContent = 'No se encontraron Matriculas';
-            searchResultsMATR.appendChild(li);
-            return;
-          }
+const calculartotales = (asignatura) => {
+  const cantidadcreditos = asignatura.creditos;
+  const ProgramaID = asignatura.programa_id;
+
+  function relacionartarifa() {
+    const tarifaEncontrada = listaTarifas.find(tarifa => tarifa.programa_id == ProgramaID);
+
+    if (tarifaEncontrada) {
+      const tarifafinal = tarifaEncontrada.costo_credito;
+      return tarifafinal;
+    } else {
+      return "No se encontró una tarifa para el programa especificado";
     }
+  };
 
-    searchInputMATR.addEventListener('input', function() {
-        const inputValueMat = this.value.toLowerCase();
-        const filteredMatr = listaMatriculas.filter(matricula => matricula.id.toLowerCase().includes(inputValueMat)
-        );
+  const tarifa = relacionartarifa();
+  const tarifafinal = tarifa * cantidadcreditos;
+  
+  console.log("Tarifa:", tarifafinal);
+  
+  totalcarrito += tarifafinal;
 
-        displayResultsMATR(filteredMatr);
-    });
+  const textoTotalCarrito = `TOTAL: ${totalcarrito}`;
 
-    displayResultsMATR(listaMatriculas)
-};
+  if (cuentacarrito.innerHTML.includes("TOTAL:")) {
+    cuentacarrito.innerHTML = textoTotalCarrito;
+  } else {
+    cuentacarrito.innerHTML += textoTotalCarrito;
+  }
+
+  console.log("TotalCarrito:", totalcarrito);
+}
+
+const crearMatricula = async ()=>{
+  await cargarFormularioMatriculas;
+  await cargarEstudiantes;
+
+  const CCInput=document.getElementById('search-input-EstMatricula');
+  const periodoInput=document.getElementById('PeriodoMatricula');
+
+  const CC=CCInput.value
+
+  const getnombreEst = (CC, listaEstudiantes) => {
+    console.log(listaEstudiantes)
+    const result = listaEstudiantes.find(estudiante => CC === estudiante.numero_documento);
+    const nombrecomp = result.nombre + " " + result.apellido;
+    const estID = result.id
+    return result ? { nombrecomp: nombrecomp, estID: estID } : "Nombre no encontrado o la lista no existe";
+  }
+
+  const infoestF = getnombreEst(CC, listaEstudiantes);
+  const nombreCompleto = infoestF.nombrecomp;
+  const idEstudiante = infoestF.estID;
+  const periodo=periodoInput.value
+
+  const nuevaMatricula={
+    id: listaMatriculas.length+1,
+    estudianteN: nombreCompleto,
+    estudiante_id: idEstudiante,
+    asignaturas_id: listaIDs,
+    periodo: periodo,
+    precio: totalcarrito,
+  }
+
+  await guardarMatricula(nuevaMatricula);
+
+  console.log("Matriculado con exito")
+  alert("Matriculado con exito")
+  return nuevaMatricula;
+}
+
+const guardarMatricula= async(nuevaMatricula)=>{
+  try{
+
+      const respuesta=await fetch('http://localhost:3000/matriculas',{
+          method:'POST',
+          headers:{
+              'Content-Type':'application/json'
+          },
+          body: JSON.stringify(nuevaMatricula),
+      });
+
+      if(!respuesta.ok){
+         throw new Error('Error al crear la Matricula. Estado: ',respuesta.status);
+      }
+      const Matriculacreada=await respuesta.json();
+      
+      console.log('Matricula creada:', Matriculacreada);
+
+  }catch(error){
+      console.error("Error al cargar Matriculas",error.message);
+  }
+}

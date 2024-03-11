@@ -1455,7 +1455,8 @@
     {
       "id": "1",
       "curso_id": 1,
-      "codigo": "PROG-AVA-PER-2024",
+      "periodo": "P24-01",
+      "codigo": "PROG-AVA-PER-1-2024",
       "creditos": 4,
       "profesor_id": 1,
       "cupos_disponibles": 20,
@@ -1471,7 +1472,8 @@
     {
       "id": "2",
       "curso_id": 2,
-      "codigo": "ALG-LI-PER-2024",
+      "periodo": "P24-01",
+      "codigo": "ALG-LI-PER-1-2024",
       "creditos": 3,
       "profesor_id": 2,
       "cupos_disponibles": 15,
@@ -1487,11 +1489,12 @@
     {
       "id": "3",
       "curso_id": 3,
+      "periodo": "P24-02",
       "codigo": "FISI-MOL-PER-2-2024",
-      "creditos": "4",
+      "creditos": 4,
       "profesor_id": 3,
       "cupos_disponibles": "30",
-      "programa_id": "5",
+      "programa_id": 5,
       "horario_clases": [
         {
           "dia": "Martes",
@@ -1503,8 +1506,9 @@
     {
       "id": "4",
       "curso_id": 13,
+      "periodo": "P24-01",
       "codigo": "BAS-DATS-PER-1-2024",
-      "creditos": "8",
+      "creditos": 8,
       "profesor_id": 5,
       "cupos_disponibles": "30",
       "programa_id": 2,
@@ -1515,6 +1519,23 @@
           "salon_id": "1"
         }
       ]
+    },
+    {
+      "id": 5,
+      "curso_id": 1,
+      "periodo": "P24-01",
+      "codigo": "PROG-AVA-PER-1-2024",
+      "creditos": "5",
+      "profesor_id": 14,
+      "cupos_disponibles": "30",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "1"
+        }
+      ]
     }
   ],
   "matriculas": [
@@ -1522,17 +1543,42 @@
       "id": 1,
       "estudianteN": "Carlos Rodriguez",
       "estudiante_id": 1,
-      "asignatura_id": 1,
-      "periodo_id": 1,
+      "asignaturas_id": [
+        1
+      ],
+      "periodo": "P24-01",
       "precio": 4000
     },
     {
       "id": 2,
       "estudianteN": "Carlos Rodriguez",
       "estudiante_id": 1,
-      "asignatura_id": 2,
-      "periodo_id": 1,
+      "asignaturas_id": [
+        2
+      ],
+      "periodo": "P24-01",
       "precio": 3300
+    },
+    {
+      "id": 3,
+      "estudianteN": "Santiago Laguado Osorio",
+      "estudiante_id": "3",
+      "asignaturas_id": [
+        1,
+        2
+      ],
+      "periodo": "P24-01",
+      "precio": 13300
+    },
+    {
+      "id": 4,
+      "estudianteN": "Ana Martínez",
+      "estudiante_id": "2",
+      "asignaturas_id": [
+        13
+      ],
+      "periodo": "P24-01",
+      "precio": 15200
     }
   ]
 }

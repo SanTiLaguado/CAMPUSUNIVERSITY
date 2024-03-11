@@ -49,6 +49,10 @@ const cargarFormularioAsignaturas = async () => {
             <input type="text" id="search-input-cursoasign" placeholder="Buscar Cursos...">
             <ul id="search-results-cursoasign"></ul>
           </div>
+          <label for="PeriodoAsigna">Periodo:</label>
+              <select id="PeriodoAsigna" required>
+                  ${cargarperiodos()}
+              </select>
           <label for="codigoASIGN">Codigo de Asignatura: (NOM-BRE-PERIODO-AÑO)</label>
           <input type="text" id="codigoASIGN" required>
           <label for="cantcreditosasign">Ingrese cantidad de Creditos:</label>
@@ -101,7 +105,9 @@ const crearAsignatura = async (event) => {
   const DiaInput = document.getElementById('HorarioDia');
   const HoraInput = document.getElementById('HorarioHoras');
   const SalonInput = document.getElementById('HorarioSalon');
+  const PeriodoInput = document.getElementById('PeriodoAsigna');
 
+  const periodoAs = PeriodoInput.value;
   const cursoAs = cursoInput.value;
   const codigoAs = codigoInput.value;
   const creditosAs = creditosInput.value;
@@ -133,6 +139,7 @@ const crearAsignatura = async (event) => {
   const nuevaAsignatura = {
     id: Number(listaAsignaturas.length + 1),
     curso_id: Number(getId(cursoAs, listaCursos)),
+    periodo: periodoAs,
     codigo: codigoAs,
     creditos: creditosAs,
     profesor_id: Number(getId(DocenteAs, listaDocentes)),
@@ -194,7 +201,7 @@ const mostrarListaAsignaturas = async () => {
 
     results.forEach(result => {
       const li = document.createElement('li');
-      li.textContent = `ID: ${result.id}, Codigo: ${result.codigo}, Horario: ${result.horario_clases[0].dia}, ${result.horario_clases[0].horario}, Creditos: ${result.creditos}, Docente ID: ${result.profesor_id}, Programa ID: ${result.programa_id}, Cupos: ${result.cupos_disponibles}`;
+      li.textContent = `ID: ${result.id}, Periodo: ${result.periodo}, Codigo: ${result.codigo}, Horario: ${result.horario_clases[0].dia}, ${result.horario_clases[0].horario}, Creditos: ${result.creditos}, Docente ID: ${result.profesor_id}, Programa ID: ${result.programa_id}, Cupos: ${result.cupos_disponibles}`;
       searchResultsAsignaturas.appendChild(li);
     });
 
