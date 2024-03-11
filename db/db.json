@@ -663,7 +663,7 @@
       "nombre": "Diego",
       "apellido": "Ramirez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "5678901234",
+      "numero_documento": "567890184",
       "ciudad_residencia": "Villavicencio",
       "Direccion": "Este 654",
       "telefono": "3456789012",
@@ -676,7 +676,7 @@
       "nombre": "Valentina",
       "apellido": "Ortiz",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "9012345678",
+      "numero_documento": "90234568",
       "ciudad_residencia": "Bucaramanga",
       "Direccion": "Oeste 321",
       "telefono": "7890123456",
@@ -689,7 +689,7 @@
       "nombre": "Ricardo",
       "apellido": "Acosta",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "2345678901",
+      "numero_documento": "23567901",
       "ciudad_residencia": "Cali",
       "Direccion": "Norte 654",
       "telefono": "0123456789",
@@ -702,7 +702,7 @@
       "nombre": "Camila",
       "apellido": "Castro",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "5678901234",
+      "numero_documento": "56981234",
       "ciudad_residencia": "Medellin",
       "Direccion": "Sur 321",
       "telefono": "3456789012",
@@ -715,7 +715,7 @@
       "nombre": "Jorge",
       "apellido": "Gomez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "9012345678",
+      "numero_documento": "012345678",
       "ciudad_residencia": "Bogota",
       "Direccion": "Este 654",
       "telefono": "6789054321",
@@ -741,7 +741,7 @@
       "nombre": "Gabriel",
       "apellido": "Gonzalez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "5678901234",
+      "numero_documento": "5678934",
       "ciudad_residencia": "Santa Marta",
       "Direccion": "Norte 654",
       "telefono": "0987654321",
@@ -754,7 +754,7 @@
       "nombre": "Daniela",
       "apellido": "Martinez",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "9012345678",
+      "numero_documento": "90123678",
       "ciudad_residencia": "Pereira",
       "Direccion": "Sur 321",
       "telefono": "9876543210",
@@ -767,7 +767,7 @@
       "nombre": "Sebastian",
       "apellido": "Sanchez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "2345678901",
+      "numero_documento": "234578901",
       "ciudad_residencia": "Manizales",
       "Direccion": "Este 654",
       "telefono": "2109876543",
@@ -780,7 +780,7 @@
       "nombre": "Valeria",
       "apellido": "Hernandez",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "5678901234",
+      "numero_documento": "568901234",
       "ciudad_residencia": "Cucuta",
       "Direccion": "Oeste 321",
       "telefono": "4321098765",
@@ -936,10 +936,10 @@
       "nombre": "Ana",
       "apellido": "Pérez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "6789012345",
+      "numero_documento": "678923945",
       "ciudad_residencia": "Sincelejo",
       "direccion": "Calle 7475",
-      "telefono": "6789012345",
+      "telefono": "67892340",
       "fecha_nacimiento": "2025-12-12",
       "sexo": "Femenino",
       "programa_id": "4"
@@ -1250,8 +1250,8 @@
     },
     {
       "id": "21",
-      "nombre": "Desarrollo de Software",
-      "codigo": "DES-SOF",
+      "nombre": "Desarrollo de planos Globales",
+      "codigo": "DES-PLG",
       "guia_catedra": "URL_Guia_Catedra.pdf"
     },
     {
@@ -1306,6 +1306,24 @@
       "id": "30",
       "nombre": "Redes Inalámbricas",
       "codigo": "RED-INA",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "31",
+      "nombre": "Redaccion Argumental",
+      "codigo": "RED-ARG",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "32",
+      "nombre": "Ramas del derecho",
+      "codigo": "RAM-DER",
+      "guia_catedra": "URL_Guia_Catedra.pdf"
+    },
+    {
+      "id": "32",
+      "nombre": "Hermeneutica Juridica",
+      "codigo": "HERM-JUR",
       "guia_catedra": "URL_Guia_Catedra.pdf"
     }
   ],
@@ -1453,87 +1471,1107 @@
   ],
   "asignaturas": [
     {
-      "id": "1",
+      "id": 1,
+      "curso_id": 10,
+      "periodo": "P24-01",
+      "codigo": "MAT-DIS-P24-01",
+      "creditos": "5",
+      "profesor_id": 3,
+      "cupos_disponibles": "32",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "10:00 - 12:00",
+          "salon_id": "7"
+        }
+      ]
+    },
+    {
+      "id": 2,
       "curso_id": 1,
       "periodo": "P24-01",
-      "codigo": "PROG-AVA-PER-1-2024",
-      "creditos": 4,
-      "profesor_id": 1,
-      "cupos_disponibles": 20,
+      "codigo": "PROG-AVA-P24-01",
+      "creditos": "6",
+      "profesor_id": 18,
+      "cupos_disponibles": "30",
       "programa_id": 1,
       "horario_clases": [
         {
           "dia": "Lunes",
           "horario": "06:00 - 08:00",
-          "salon_id": 1
+          "salon_id": "1"
         }
       ]
     },
     {
-      "id": "2",
+      "id": 3,
+      "curso_id": 7,
+      "periodo": "P24-01",
+      "codigo": "ELE-MAG-P24-01",
+      "creditos": "7",
+      "profesor_id": 14,
+      "cupos_disponibles": "20",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "2"
+        }
+      ]
+    },
+    {
+      "id": 4,
       "curso_id": 2,
       "periodo": "P24-01",
-      "codigo": "ALG-LI-PER-1-2024",
-      "creditos": 3,
-      "profesor_id": 2,
-      "cupos_disponibles": 15,
-      "programa_id": 1,
-      "horario_clases": [
-        {
-          "dia": "Martes",
-          "horario": "08:00 - 10:00",
-          "salon_id": "1"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "curso_id": 3,
-      "periodo": "P24-02",
-      "codigo": "FISI-MOL-PER-2-2024",
-      "creditos": 4,
+      "codigo": "ALG-LI-P24-01",
+      "creditos": "5",
       "profesor_id": 3,
-      "cupos_disponibles": "30",
-      "programa_id": 5,
-      "horario_clases": [
-        {
-          "dia": "Martes",
-          "horario": "06:00 - 08:00",
-          "salon_id": "1"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "curso_id": 13,
-      "periodo": "P24-01",
-      "codigo": "BAS-DATS-PER-1-2024",
-      "creditos": 8,
-      "profesor_id": 5,
-      "cupos_disponibles": "30",
-      "programa_id": 2,
+      "cupos_disponibles": "25",
+      "programa_id": 3,
       "horario_clases": [
         {
           "dia": "Lunes",
-          "horario": "08:00 - 10:00",
-          "salon_id": "1"
+          "horario": "14:00 - 16:00",
+          "salon_id": "3"
         }
       ]
     },
     {
       "id": 5,
-      "curso_id": 1,
+      "curso_id": 27,
       "periodo": "P24-01",
-      "codigo": "PROG-AVA-PER-1-2024",
-      "creditos": "5",
+      "codigo": "DIS-INT-P24-01",
+      "creditos": "8",
+      "profesor_id": 7,
+      "cupos_disponibles": "25",
+      "programa_id": 8,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "curso_id": 17,
+      "periodo": "P24-01",
+      "codigo": "CAL-DIF-P24-01",
+      "creditos": "4",
+      "profesor_id": 5,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "16:00 - 18:00",
+          "salon_id": "2"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "curso_id": 10,
+      "periodo": "P24-01",
+      "codigo": "MAT-DIS-P24-01",
+      "creditos": "4",
+      "profesor_id": null,
+      "cupos_disponibles": "32",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "7"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "curso_id": 4,
+      "periodo": "P24-01",
+      "codigo": "ING-AVA-P24-01",
+      "creditos": "8",
+      "profesor_id": 24,
+      "cupos_disponibles": "25",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "06:00 - 08:00",
+          "salon_id": "20"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "curso_id": 10,
+      "periodo": "P24-01",
+      "codigo": "MAT-DIS-P24-01",
+      "creditos": "7",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 7,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "curso_id": 3,
+      "periodo": "P24-01",
+      "codigo": "FIS-MOL-P24-01",
+      "creditos": "6",
       "profesor_id": 14,
+      "cupos_disponibles": "25",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "10:00 - 12:00",
+          "salon_id": "15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "curso_id": 6,
+      "periodo": "P24-01",
+      "codigo": "ANA-DAT-P24-01",
+      "creditos": "6",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "18:30 - 20:30",
+          "salon_id": "5"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "curso_id": 5,
+      "periodo": "P24-01",
+      "codigo": "FIS-MOD-P24-01",
+      "creditos": "6",
+      "profesor_id": 18,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "10:00 - 12:00",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "curso_id": 9,
+      "periodo": "P24-01",
+      "codigo": "DIS-ALG-P24-01",
+      "creditos": "7",
+      "profesor_id": 5,
+      "cupos_disponibles": "25",
+      "programa_id": 2,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "16:00 - 18:00",
+          "salon_id": "20"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "curso_id": 8,
+      "periodo": "P24-01",
+      "codigo": "RED-COM-P24-01",
+      "creditos": "5",
+      "profesor_id": 7,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "12"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "curso_id": 6,
+      "periodo": "P24-01",
+      "codigo": "ANA-DAT-P24-01",
+      "creditos": "6",
+      "profesor_id": null,
+      "cupos_disponibles": "25",
+      "programa_id": 7,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "06:00 - 08:00",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "curso_id": 11,
+      "periodo": "P24-01",
+      "codigo": "EST-APL-P24-01",
+      "creditos": "5",
+      "profesor_id": 11,
+      "cupos_disponibles": "25",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Viernes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "16"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "curso_id": 18,
+      "periodo": "P24-01",
+      "codigo": "FIS-CLA-P24-01",
+      "creditos": "5",
+      "profesor_id": 6,
+      "cupos_disponibles": "25",
+      "programa_id": 3,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "18"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "curso_id": 20,
+      "periodo": "P24-01",
+      "codigo": "SIS-EMB-P24-01",
+      "creditos": "6",
+      "profesor_id": 14,
+      "cupos_disponibles": "22",
+      "programa_id": 5,
+      "horario_clases": [
+        {
+          "dia": "Jueves",
+          "horario": "14:00 - 16:00",
+          "salon_id": "12"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "curso_id": 15,
+      "periodo": "P24-01",
+      "codigo": "SIS-DIS-P24-01",
+      "creditos": "7",
+      "profesor_id": 4,
+      "cupos_disponibles": "25",
+      "programa_id": 5,
+      "horario_clases": [
+        {
+          "dia": "Viernes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "12"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "curso_id": 22,
+      "periodo": "P24-01",
+      "codigo": "ANA-NUM-P24-01",
+      "creditos": "6",
+      "profesor_id": 3,
+      "cupos_disponibles": "225",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "13"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "curso_id": 21,
+      "periodo": "P24-01",
+      "codigo": "DES-PLG-P24-01",
+      "creditos": "7",
+      "profesor_id": 11,
+      "cupos_disponibles": "25",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "curso_id": 17,
+      "periodo": "P24-01",
+      "codigo": "CAL-DIF-P24-01",
+      "creditos": "5",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "16:00 - 18:00",
+          "salon_id": "18"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "curso_id": 11,
+      "periodo": "P24-01",
+      "codigo": "EST-APL-P24-01",
+      "creditos": "6",
+      "profesor_id": 14,
+      "cupos_disponibles": "25",
+      "programa_id": 7,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "14"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "curso_id": 9,
+      "periodo": "P24-01",
+      "codigo": "DIS-ALG-P24-01",
+      "creditos": "6",
+      "profesor_id": 14,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Jueves",
+          "horario": "10:00 - 12:00",
+          "salon_id": "16"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "curso_id": 4,
+      "periodo": "P24-01",
+      "codigo": "ING-AVA-P24-01",
+      "creditos": "6",
+      "profesor_id": 24,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "18:30 - 20:30",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "curso_id": 12,
+      "periodo": "P24-01",
+      "codigo": "SIS-OP-P24-01",
+      "creditos": "6",
+      "profesor_id": null,
+      "cupos_disponibles": "25",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "20"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "curso_id": 14,
+      "periodo": "P24-01",
+      "codigo": "INT-ART-P24-01",
+      "creditos": "6",
+      "profesor_id": 5,
+      "cupos_disponibles": "20",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "19"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "curso_id": 10,
+      "periodo": "P24-01",
+      "codigo": "MAT-DIS-P24-01",
+      "creditos": "6",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "curso_id": 8,
+      "periodo": "P24-01",
+      "codigo": "RED-COM-P24-01",
+      "creditos": "5",
+      "profesor_id": 18,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "16:00 - 18:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "curso_id": 3,
+      "periodo": "P24-01",
+      "codigo": "FIS-MOL-P24-01",
+      "creditos": "6",
+      "profesor_id": null,
+      "cupos_disponibles": "20",
+      "programa_id": 5,
+      "horario_clases": [
+        {
+          "dia": "Jueves",
+          "horario": "10:00 - 12:00",
+          "salon_id": "13"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "curso_id": 10,
+      "periodo": "P24-02",
+      "codigo": "MAT-DIS-P24-02",
+      "creditos": "5",
+      "profesor_id": 3,
+      "cupos_disponibles": "32",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "10:00 - 12:00",
+          "salon_id": "7"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "curso_id": 1,
+      "periodo": "P24-02",
+      "codigo": "PROG-AVA-P24-02",
+      "creditos": "6",
+      "profesor_id": 18,
       "cupos_disponibles": "30",
       "programa_id": 1,
       "horario_clases": [
         {
           "dia": "Lunes",
+          "horario": "06:00 - 08:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "curso_id": 7,
+      "periodo": "P24-02",
+      "codigo": "ELE-MAG-P24-02",
+      "creditos": "7",
+      "profesor_id": 14,
+      "cupos_disponibles": "20",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "2"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "curso_id": 2,
+      "periodo": "P24-02",
+      "codigo": "ALG-LI-P24-02",
+      "creditos": "5",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 3,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "3"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "curso_id": 27,
+      "periodo": "P24-02",
+      "codigo": "DIS-INT-P24-02",
+      "creditos": "8",
+      "profesor_id": 7,
+      "cupos_disponibles": "25",
+      "programa_id": 8,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "curso_id": 17,
+      "periodo": "P24-02",
+      "codigo": "CAL-DIF-P24-02",
+      "creditos": "4",
+      "profesor_id": 5,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "16:00 - 18:00",
+          "salon_id": "2"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "curso_id": 10,
+      "periodo": "P24-02",
+      "codigo": "MAT-DIS-P24-02",
+      "creditos": "4",
+      "profesor_id": null,
+      "cupos_disponibles": "32",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "7"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "curso_id": 4,
+      "periodo": "P24-02",
+      "codigo": "ING-AVA-P24-02",
+      "creditos": "8",
+      "profesor_id": 24,
+      "cupos_disponibles": "25",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "06:00 - 08:00",
+          "salon_id": "20"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "curso_id": 10,
+      "periodo": "P24-02",
+      "codigo": "MAT-DIS-P24-02",
+      "creditos": "7",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 7,
+      "horario_clases": [
+        {
+          "dia": "Martes",
           "horario": "14:00 - 16:00",
           "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "curso_id": 3,
+      "periodo": "P24-02",
+      "codigo": "FIS-MOL-P24-02",
+      "creditos": "6",
+      "profesor_id": 14,
+      "cupos_disponibles": "25",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "10:00 - 12:00",
+          "salon_id": "15"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "curso_id": 6,
+      "periodo": "P24-02",
+      "codigo": "ANA-DAT-P24-02",
+      "creditos": "6",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "18:30 - 20:30",
+          "salon_id": "5"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "curso_id": 5,
+      "periodo": "P24-02",
+      "codigo": "FIS-MOD-P24-02",
+      "creditos": "6",
+      "profesor_id": 18,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "10:00 - 12:00",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "curso_id": 9,
+      "periodo": "P24-02",
+      "codigo": "DIS-ALG-P24-02",
+      "creditos": "7",
+      "profesor_id": 5,
+      "cupos_disponibles": "25",
+      "programa_id": 2,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "16:00 - 18:00",
+          "salon_id": "20"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "curso_id": 8,
+      "periodo": "P24-02",
+      "codigo": "RED-COM-P24-02",
+      "creditos": "5",
+      "profesor_id": 7,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "12"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "curso_id": 6,
+      "periodo": "P24-02",
+      "codigo": "ANA-DAT-P24-02",
+      "creditos": "6",
+      "profesor_id": null,
+      "cupos_disponibles": "25",
+      "programa_id": 7,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "06:00 - 08:00",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "curso_id": 11,
+      "periodo": "P24-02",
+      "codigo": "EST-APL-P24-02",
+      "creditos": "5",
+      "profesor_id": 11,
+      "cupos_disponibles": "25",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Viernes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "16"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "curso_id": 18,
+      "periodo": "P24-02",
+      "codigo": "FIS-CLA-P24-02",
+      "creditos": "5",
+      "profesor_id": 6,
+      "cupos_disponibles": "25",
+      "programa_id": 3,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "18"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "curso_id": 20,
+      "periodo": "P24-02",
+      "codigo": "SIS-EMB-P24-02",
+      "creditos": "6",
+      "profesor_id": 14,
+      "cupos_disponibles": "22",
+      "programa_id": 5,
+      "horario_clases": [
+        {
+          "dia": "Jueves",
+          "horario": "14:00 - 16:00",
+          "salon_id": "12"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "curso_id": 15,
+      "periodo": "P24-02",
+      "codigo": "SIS-DIS-P24-02",
+      "creditos": "7",
+      "profesor_id": 4,
+      "cupos_disponibles": "25",
+      "programa_id": 5,
+      "horario_clases": [
+        {
+          "dia": "Viernes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "12"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "curso_id": 22,
+      "periodo": "P24-02",
+      "codigo": "ANA-NUM-P24-02",
+      "creditos": "6",
+      "profesor_id": 3,
+      "cupos_disponibles": "225",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "13"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "curso_id": 21,
+      "periodo": "P24-02",
+      "codigo": "DES-PLG-P24-02",
+      "creditos": "7",
+      "profesor_id": 11,
+      "cupos_disponibles": "25",
+      "programa_id": 4,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "curso_id": 17,
+      "periodo": "P24-02",
+      "codigo": "CAL-DIF-P24-02",
+      "creditos": "5",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "16:00 - 18:00",
+          "salon_id": "18"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "curso_id": 11,
+      "periodo": "P24-02",
+      "codigo": "EST-APL-P24-02",
+      "creditos": "6",
+      "profesor_id": 14,
+      "cupos_disponibles": "25",
+      "programa_id": 7,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "14"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "curso_id": 9,
+      "periodo": "P24-02",
+      "codigo": "DIS-ALG-P24-02",
+      "creditos": "6",
+      "profesor_id": 14,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Jueves",
+          "horario": "10:00 - 12:00",
+          "salon_id": "16"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "curso_id": 4,
+      "periodo": "P24-02",
+      "codigo": "ING-AVA-P24-02",
+      "creditos": "6",
+      "profesor_id": 24,
+      "cupos_disponibles": "25",
+      "programa_id": 1,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "18:30 - 20:30",
+          "salon_id": "17"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "curso_id": 12,
+      "periodo": "P24-02",
+      "codigo": "SIS-OP-P24-02",
+      "creditos": "6",
+      "profesor_id": null,
+      "cupos_disponibles": "25",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "20"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "curso_id": 14,
+      "periodo": "P24-02",
+      "codigo": "INT-ART-P24-02",
+      "creditos": "6",
+      "profesor_id": 5,
+      "cupos_disponibles": "20",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "14:00 - 16:00",
+          "salon_id": "19"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "curso_id": 10,
+      "periodo": "P24-02",
+      "codigo": "MAT-DIS-P24-02",
+      "creditos": "6",
+      "profesor_id": 3,
+      "cupos_disponibles": "25",
+      "programa_id": 10,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "curso_id": 8,
+      "periodo": "P24-02",
+      "codigo": "RED-COM-P24-02",
+      "creditos": "5",
+      "profesor_id": 18,
+      "cupos_disponibles": "25",
+      "programa_id": 6,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "16:00 - 18:00",
+          "salon_id": "1"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "curso_id": 3,
+      "periodo": "P24-02",
+      "codigo": "FIS-MOL-P24-02",
+      "creditos": "6",
+      "profesor_id": null,
+      "cupos_disponibles": "20",
+      "programa_id": 5,
+      "horario_clases": [
+        {
+          "dia": "Jueves",
+          "horario": "10:00 - 12:00",
+          "salon_id": "13"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "curso_id": 32,
+      "periodo": "P24-02",
+      "codigo": "RAM-DER-P24-02",
+      "creditos": "6",
+      "profesor_id": 12,
+      "cupos_disponibles": "25",
+      "programa_id": 9,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "08:00 - 10:00",
+          "salon_id": "15"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "curso_id": 32,
+      "periodo": "P24-01",
+      "codigo": "HERM-JUR-P24-01",
+      "creditos": "8",
+      "profesor_id": 11,
+      "cupos_disponibles": "25",
+      "programa_id": 9,
+      "horario_clases": [
+        {
+          "dia": "Miercoles",
+          "horario": "16:00 - 18:00",
+          "salon_id": "13"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "curso_id": 31,
+      "periodo": "P24-01",
+      "codigo": "RED-ARG-P24-01",
+      "creditos": "5",
+      "profesor_id": 7,
+      "cupos_disponibles": "25",
+      "programa_id": 9,
+      "horario_clases": [
+        {
+          "dia": "Viernes",
+          "horario": "10:00 - 12:00",
+          "salon_id": "18"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "curso_id": 32,
+      "periodo": "P24-02",
+      "codigo": "RAM-DER-P24-02",
+      "creditos": "4",
+      "profesor_id": 14,
+      "cupos_disponibles": "25",
+      "programa_id": 9,
+      "horario_clases": [
+        {
+          "dia": "Martes",
+          "horario": "06:00 - 08:00",
+          "salon_id": "16"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "curso_id": 31,
+      "periodo": "P24-02",
+      "codigo": "RED-ARG-P24-02",
+      "creditos": "4",
+      "profesor_id": 11,
+      "cupos_disponibles": "25",
+      "programa_id": 9,
+      "horario_clases": [
+        {
+          "dia": "Lunes",
+          "horario": "08:00 - 10:00",
+          "salon_id": "15"
         }
       ]
     }
@@ -1551,13 +2589,13 @@
     },
     {
       "id": 2,
-      "estudianteN": "Carlos Rodriguez",
-      "estudiante_id": 1,
+      "estudianteN": "Ana Martínez",
+      "estudiante_id": "2",
       "asignaturas_id": [
-        2
+        13
       ],
       "periodo": "P24-01",
-      "precio": 3300
+      "precio": 15200
     },
     {
       "id": 3,
@@ -1572,13 +2610,266 @@
     },
     {
       "id": 4,
-      "estudianteN": "Ana Martínez",
-      "estudiante_id": "2",
+      "estudianteN": "Juan Garcia Hernandez",
+      "estudiante_id": "4",
       "asignaturas_id": [
-        13
+        4,
+        12,
+        14,
+        10
       ],
       "periodo": "P24-01",
-      "precio": 15200
+      "precio": 39000
+    },
+    {
+      "id": 5,
+      "estudianteN": "Clara Elibeth Osorio Reina",
+      "estudiante_id": "5",
+      "asignaturas_id": [
+        10,
+        6,
+        11
+      ],
+      "periodo": "P24-01",
+      "precio": 32300
+    },
+    {
+      "id": 6,
+      "estudianteN": "Maria Gomez",
+      "estudiante_id": "6",
+      "asignaturas_id": [
+        9
+      ],
+      "periodo": "P24-01",
+      "precio": 13300
+    },
+    {
+      "id": 7,
+      "estudianteN": "Pedro Rodriguez",
+      "estudiante_id": "7",
+      "asignaturas_id": [
+        2,
+        18
+      ],
+      "periodo": "P24-01",
+      "precio": 16000
+    },
+    {
+      "id": 8,
+      "estudianteN": "Luisa Lopez",
+      "estudiante_id": "8",
+      "asignaturas_id": [
+        10,
+        3,
+        11
+      ],
+      "periodo": "P24-01",
+      "precio": 27200
+    },
+    {
+      "id": 9,
+      "estudianteN": "Andres Gonzalez",
+      "estudiante_id": "9",
+      "asignaturas_id": [
+        20,
+        15,
+        3
+      ],
+      "periodo": "P24-01",
+      "precio": 38000
+    },
+    {
+      "id": 10,
+      "estudianteN": "Laura Martinez",
+      "estudiante_id": "10",
+      "asignaturas_id": [
+        7,
+        5,
+        17,
+        9
+      ],
+      "periodo": "P24-01",
+      "precio": 48000
+    },
+    {
+      "id": 11,
+      "estudianteN": "Carlos Sanchez",
+      "estudiante_id": "11",
+      "asignaturas_id": [
+        10,
+        6,
+        11
+      ],
+      "periodo": "P24-01",
+      "precio": 32300
+    },
+    {
+      "id": 12,
+      "estudianteN": "Ana Hernandez",
+      "estudiante_id": "12",
+      "asignaturas_id": [
+        27
+      ],
+      "periodo": "P24-01",
+      "precio": 11200
+    },
+    {
+      "id": 13,
+      "estudianteN": "Javier Garcia",
+      "estudiante_id": "13",
+      "asignaturas_id": [
+        32,
+        31,
+        32
+      ],
+      "periodo": "P24-01",
+      "precio": 34200
+    },
+    {
+      "id": 14,
+      "estudianteN": "Sofia Vargas",
+      "estudiante_id": "14",
+      "asignaturas_id": [
+        4,
+        12,
+        14
+      ],
+      "periodo": "P24-01",
+      "precio": 30000
+    },
+    {
+      "id": 15,
+      "estudianteN": "Diego Ramirez",
+      "estudiante_id": "7",
+      "asignaturas_id": [
+        1,
+        17,
+        10,
+        6,
+        8,
+        4
+      ],
+      "periodo": "P24-01",
+      "precio": 58900
+    },
+    {
+      "id": 16,
+      "estudianteN": "Valentina Ortiz",
+      "estudiante_id": "9",
+      "asignaturas_id": [
+        9
+      ],
+      "periodo": "P24-01",
+      "precio": 13300
+    },
+    {
+      "id": 17,
+      "estudianteN": "Ricardo Acosta",
+      "estudiante_id": "14",
+      "asignaturas_id": [
+        2,
+        18
+      ],
+      "periodo": "P24-01",
+      "precio": 16000
+    },
+    {
+      "id": 18,
+      "estudianteN": "Camila Castro",
+      "estudiante_id": "7",
+      "asignaturas_id": [
+        10,
+        3,
+        11,
+        22
+      ],
+      "periodo": "P24-01",
+      "precio": 37400
+    },
+    {
+      "id": 19,
+      "estudianteN": "Jorge Gomez",
+      "estudiante_id": "18",
+      "asignaturas_id": [
+        10,
+        3,
+        11,
+        22
+      ],
+      "periodo": "P24-01",
+      "precio": 37400
+    },
+    {
+      "id": 20,
+      "estudianteN": "Isabella Lopez",
+      "estudiante_id": "9",
+      "asignaturas_id": [
+        20,
+        15,
+        3
+      ],
+      "periodo": "P24-01",
+      "precio": 38000
+    },
+    {
+      "id": 21,
+      "estudianteN": "Gabriel Gonzalez",
+      "estudiante_id": "14",
+      "asignaturas_id": [
+        7,
+        5,
+        17,
+        9,
+        8
+      ],
+      "periodo": "P24-01",
+      "precio": 58000
+    },
+    {
+      "id": 22,
+      "estudianteN": "Daniela Martinez",
+      "estudiante_id": "7",
+      "asignaturas_id": [
+        10,
+        6,
+        11
+      ],
+      "periodo": "P24-01",
+      "precio": 32300
+    },
+    {
+      "id": 23,
+      "estudianteN": "Sebastian Sanchez",
+      "estudiante_id": "9",
+      "asignaturas_id": [
+        27
+      ],
+      "periodo": "P24-01",
+      "precio": 11200
+    },
+    {
+      "id": 24,
+      "estudianteN": "Valeria Hernandez",
+      "estudiante_id": "14",
+      "asignaturas_id": [
+        32,
+        31
+      ],
+      "periodo": "P24-01",
+      "precio": 23400
+    },
+    {
+      "id": 25,
+      "estudianteN": "Andres Gonzalez",
+      "estudiante_id": "9",
+      "asignaturas_id": [
+        1,
+        17,
+        10,
+        8
+      ],
+      "periodo": "P24-01",
+      "precio": 36100
     }
   ]
 }

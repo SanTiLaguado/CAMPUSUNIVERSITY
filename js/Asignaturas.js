@@ -53,8 +53,6 @@ const cargarFormularioAsignaturas = async () => {
               <select id="PeriodoAsigna" required>
                   ${cargarperiodos()}
               </select>
-          <label for="codigoASIGN">Codigo de Asignatura: (NOM-BRE-PERIODO-AÑO)</label>
-          <input type="text" id="codigoASIGN" required>
           <label for="cantcreditosasign">Ingrese cantidad de Creditos:</label>
           <input type="number" id="cantcreditosasign" required>
           <label for="DocenteAsign">Seleccione Al Docente Encargado:</label>
@@ -97,7 +95,6 @@ const crearAsignatura = async (event) => {
   event.preventDefault();
   await cargarAsignaturas();
   const cursoInput = document.getElementById('search-input-cursoasign');
-  const codigoInput = document.getElementById('codigoASIGN');
   const creditosInput = document.getElementById('cantcreditosasign');
   const DocenteInput = document.getElementById('search-input-DocenteAsign');
   const cuposInput = document.getElementById('cuposAsign');
@@ -109,7 +106,6 @@ const crearAsignatura = async (event) => {
 
   const periodoAs = PeriodoInput.value;
   const cursoAs = cursoInput.value;
-  const codigoAs = codigoInput.value;
   const creditosAs = creditosInput.value;
   const DocenteAs = DocenteInput.value;
   const cuposAs = cuposInput.value;
@@ -136,11 +132,19 @@ const crearAsignatura = async (event) => {
     return result ? result.id : "Id no encontrada o la lista no existe";
   }
 
+  const getcodecurs = (cursoAs, listaCursos) => {
+    const result = listaCursos.find(element => cursoAs === element.nombre);
+    return result ? result.codigo : "Id no encontrada o la lista no existe";
+  }
+
+  const codiogocurso=getcodecurs(cursoAs, listaCursos);
+  codigoAsignat=(codiogocurso + "-" + periodoAs)
+
   const nuevaAsignatura = {
     id: Number(listaAsignaturas.length + 1),
     curso_id: Number(getId(cursoAs, listaCursos)),
     periodo: periodoAs,
-    codigo: codigoAs,
+    codigo: codigoAsignat,
     creditos: creditosAs,
     profesor_id: Number(getId(DocenteAs, listaDocentes)),
     cupos_disponibles: cuposAs,

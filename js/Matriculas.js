@@ -105,7 +105,7 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
         cursoN= getName(cursoID, listaCursos)
         
         const asignaturaInfo = document.createElement('li');
-        asignaturaInfo.textContent = `ID: ${asignatura.curso_id}, Curso: ${cursoN}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
+        asignaturaInfo.textContent = `ID: ${asignatura.curso_id}, Curso: ${cursoN}, Periodo: ${asignatura.periodo}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
         const botonAgregar = document.createElement('a');
         botonAgregar.textContent = 'Añadir';
         botonAgregar.classList.add('boton-carrito-matriculas'); 
@@ -119,7 +119,6 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
         AsignDispDiv.appendChild(asignaturaInfo);
     });
 }
-
 
   searchInputEstudianteM.addEventListener('input', function () {
       const inputValue = this.value.toLowerCase();
@@ -155,24 +154,10 @@ function mostrarCarrito() {
   });
 }
 
-
 const botonEnvMatr = document.getElementById("botonenvmatr");
 botonEnvMatr.addEventListener('click', async function() {
   crearMatricula();
 });
-
-
-const mostrarListaMatriculas = async () => {
-  await cargarMatriculas
-  console.log(listaMatriculas)
-  const listaElemento = document.getElementById("Listado-Matriculas");
-
-  listaMatriculas.forEach(matricula => {
-    const listItem = document.createElement("li");
-    listItem.textContent = `ID: ${matricula.id}, Estudiante: ${matricula.estudianteN}, Asig. Matriculadas: ${matricula.asignaturas_id}, Total Pagado: $${matricula.precio} `;
-    listaElemento.appendChild(listItem);
-  });
-}
 
 const cuentacarrito = document.getElementById("cuenta-carrito");
 
@@ -268,4 +253,16 @@ const guardarMatricula= async(nuevaMatricula)=>{
   }catch(error){
       console.error("Error al cargar Matriculas",error.message);
   }
+}
+
+const mostrarListaMatriculas = async () => {
+  await cargarMatriculas
+  console.log(listaMatriculas)
+  const listaElemento = document.getElementById("Listado-Matriculas");
+
+  listaMatriculas.forEach(matricula => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `ID: ${matricula.id}, Estudiante: ${matricula.estudianteN}, ID Asig. Matriculadas: ${matricula.asignaturas_id}, Periodo: ${matricula.periodo}, Total Pagado: $${matricula.precio} `;
+    listaElemento.appendChild(listItem);
+  });
 }
