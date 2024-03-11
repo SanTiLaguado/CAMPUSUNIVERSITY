@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     cargarFormularioAsignaturas();
     await mostrarListaAsignaturas();
     cargarFormularioMatriculas();
+    generarinformeMatr();
+    calcularTotalMatriculasPorPeriodo();
     
 
     const links = document.querySelectorAll('.navigation a');
@@ -41,9 +43,7 @@ const navigateToSection = (sectionId) => {
 const sectionMap = {
     'Inicio': 'Inicio',
     // Informes
-    'Informes': 'inforMatriculas',
-    'Informe Matriculas': 'inforMatriculas',
-    'Informe Asignaturas': 'inforAsignatura',
+    'Modulo de Informes': 'informes-sec',
     'Generar Horarios': 'Horarios',
     // Datos Existentes
     'Datos Existentes': 'Programas',

@@ -118,6 +118,8 @@ function CargarInformacionparaEst(searchInput4, searchResults4, infoEstDIvId, as
         asignaturaInfo.appendChild(botonAgregar); 
         AsignDispDiv.appendChild(asignaturaInfo);
     });
+  
+    return cursoN
 }
 
   searchInputEstudianteM.addEventListener('input', function () {
@@ -148,7 +150,7 @@ function mostrarCarrito() {
 
   carritoMatriculas.forEach(asignatura => {
       const li = document.createElement('li');
-      li.textContent = `ID: ${asignatura.curso_id}, Curso: ${cursoN}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
+      li.textContent = `ID: ${asignatura.curso_id}, Horario: ${asignatura.horario_clases[0].horario}, Dia: ${asignatura.horario_clases[0].dia}`;
 
       listaCarrito.appendChild(li);
   });

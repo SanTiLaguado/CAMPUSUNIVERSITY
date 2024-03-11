@@ -585,7 +585,7 @@
       "nombre": "Andres",
       "apellido": "Gonzalez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "9012345678",
+      "numero_documento": "903249678",
       "ciudad_residencia": "Cartagena",
       "Direccion": "Diagonal 654",
       "telefono": "3456789012",
@@ -598,7 +598,7 @@
       "nombre": "Laura",
       "apellido": "Martinez",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "6789012345",
+      "numero_documento": "6789019316",
       "ciudad_residencia": "Santa Marta",
       "Direccion": "Circular 321",
       "telefono": "8901234567",
@@ -611,7 +611,7 @@
       "nombre": "Carlos",
       "apellido": "Sanchez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "3456789012",
+      "numero_documento": "345647102",
       "ciudad_residencia": "Pereira",
       "Direccion": "Oriente 654",
       "telefono": "0123456789",
@@ -624,7 +624,7 @@
       "nombre": "Ana",
       "apellido": "Hernandez",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "0123456789",
+      "numero_documento": "193956789",
       "ciudad_residencia": "Manizales",
       "Direccion": "Occidente 321",
       "telefono": "7890123456",
@@ -637,7 +637,7 @@
       "nombre": "Javier",
       "apellido": "Garcia",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "7890123456",
+      "numero_documento": "789010395",
       "ciudad_residencia": "Cucuta",
       "Direccion": "Norte 654",
       "telefono": "2345678901",
@@ -650,7 +650,7 @@
       "nombre": "Sofia",
       "apellido": "Vargas",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "2345678901",
+      "numero_documento": "294167801",
       "ciudad_residencia": "Ibague",
       "Direccion": "Sur 321",
       "telefono": "9012345678",
@@ -728,7 +728,7 @@
       "nombre": "Isabella",
       "apellido": "Lopez",
       "tipo_documento": "Cedula de Extrangeria",
-      "numero_documento": "2345678901",
+      "numero_documento": "2345078301",
       "ciudad_residencia": "Cartagena",
       "Direccion": "Oeste 321",
       "telefono": "1234567890",
@@ -793,7 +793,7 @@
       "nombre": "Andres",
       "apellido": "Garcia",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "9012345678",
+      "numero_documento": "90625178",
       "ciudad_residencia": "Ibague",
       "Direccion": "Norte 654",
       "telefono": "6543210987",
@@ -803,10 +803,10 @@
     },
     {
       "id": "26",
-      "nombre": "Emma",
-      "apellido": "Pérez",
+      "nombre": "Elmma",
+      "apellido": "Ricon",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "6789012345",
+      "numero_documento": "678992305",
       "ciudad_residencia": "Bogotá",
       "direccion": "Calle 5455",
       "telefono": "6789012345",
@@ -819,7 +819,7 @@
       "nombre": "Ian",
       "apellido": "Hernández",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "7890123456",
+      "numero_documento": "789085246",
       "ciudad_residencia": "Santa Marta",
       "direccion": "Circular 5657",
       "telefono": "7890123456",
@@ -832,7 +832,7 @@
       "nombre": "Mía",
       "apellido": "González",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "8901234567",
+      "numero_documento": "8902563567",
       "ciudad_residencia": "Pereira",
       "direccion": "Plaza 5859",
       "telefono": "8901234567",
@@ -843,9 +843,9 @@
     {
       "id": "29",
       "nombre": "Oliver",
-      "apellido": "Ruiz",
+      "apellido": "Perez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "9012345678",
+      "numero_documento": "90145678",
       "ciudad_residencia": "Manizales",
       "direccion": "Paralela 6061",
       "telefono": "9012345678",
@@ -858,7 +858,7 @@
       "nombre": "Valeria",
       "apellido": "Díaz",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "0123456789",
+      "numero_documento": "9123056789",
       "ciudad_residencia": "Ibagué",
       "direccion": "Autopista 6263",
       "telefono": "0123456789",
@@ -871,7 +871,7 @@
       "nombre": "Carlos",
       "apellido": "Rodríguez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "1234567890",
+      "numero_documento": "273456189",
       "ciudad_residencia": "Armenia",
       "direccion": "Carretera 6465",
       "telefono": "1234567890",
@@ -884,7 +884,7 @@
       "nombre": "Laura",
       "apellido": "García",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "2345678901",
+      "numero_documento": "239567891",
       "ciudad_residencia": "Villavicencio",
       "direccion": "Paseo 6667",
       "telefono": "2345678901",
@@ -897,7 +897,7 @@
       "nombre": "Juan",
       "apellido": "López",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "3456789012",
+      "numero_documento": "345677512",
       "ciudad_residencia": "Popayán",
       "direccion": "Ronda 6869",
       "telefono": "3456789012",
@@ -910,7 +910,7 @@
       "nombre": "María",
       "apellido": "Martínez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "4567890123",
+      "numero_documento": "564890103",
       "ciudad_residencia": "Tunja",
       "direccion": "Glorieta 7071",
       "telefono": "4567890123",
@@ -923,7 +923,7 @@
       "nombre": "Andrés",
       "apellido": "Gómez",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "5678901234",
+      "numero_documento": "5678901674",
       "ciudad_residencia": "Riohacha",
       "direccion": "Vereda 7273",
       "telefono": "5678901234",
@@ -949,7 +949,7 @@
       "nombre": "Diego",
       "apellido": "Hernández",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "7890123456",
+      "numero_documento": "78901456",
       "ciudad_residencia": "Quibdó",
       "direccion": "Avendida 7677",
       "telefono": "7890123456",
@@ -962,7 +962,7 @@
       "nombre": "Sofía",
       "apellido": "González",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "8901234567",
+      "numero_documento": "890129567",
       "ciudad_residencia": "Pasto",
       "direccion": "Carrera 7879",
       "telefono": "8901234567",
@@ -975,7 +975,7 @@
       "nombre": "Gabriel",
       "apellido": "Ruiz",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "9012345678",
+      "numero_documento": "907245678",
       "ciudad_residencia": "Neiva",
       "direccion": "Prolongación 8081",
       "telefono": "9012345678",
@@ -988,7 +988,7 @@
       "nombre": "Camila",
       "apellido": "Díaz",
       "tipo_documento": "Cedula de cuidadania",
-      "numero_documento": "0123456789",
+      "numero_documento": "0123456989",
       "ciudad_residencia": "Montería",
       "direccion": "Avenida 8283",
       "telefono": "0123456789",
@@ -1077,7 +1077,7 @@
     {
       "id": "47",
       "nombre": "Ian",
-      "apellido": "Hernández",
+      "apellido": "Marulanda",
       "tipo_documento": "Cedula de cuidadania",
       "numero_documento": "7890123456",
       "ciudad_residencia": "Santa Marta",
@@ -1090,7 +1090,7 @@
     {
       "id": "48",
       "nombre": "Mía",
-      "apellido": "González",
+      "apellido": "Jackson",
       "tipo_documento": "Cedula de cuidadania",
       "numero_documento": "8901234567",
       "ciudad_residencia": "Pereira",
@@ -2870,6 +2870,306 @@
       ],
       "periodo": "P24-01",
       "precio": 36100
+    },
+    {
+      "id": 26,
+      "estudianteN": "Andres Garcia",
+      "estudiante_id": "25",
+      "asignaturas_id": [
+        1,
+        17,
+        10,
+        4
+      ],
+      "periodo": "P24-02",
+      "precio": 38000
+    },
+    {
+      "id": 27,
+      "estudianteN": "Elmma Ricon",
+      "estudiante_id": "26",
+      "asignaturas_id": [
+        1,
+        10,
+        4,
+        8
+      ],
+      "periodo": "P24-02",
+      "precio": 39900
+    },
+    {
+      "id": 28,
+      "estudianteN": "Ian Hernández",
+      "estudiante_id": "27",
+      "asignaturas_id": [
+        15,
+        20,
+        3
+      ],
+      "periodo": "P24-02",
+      "precio": 38000
+    },
+    {
+      "id": 29,
+      "estudianteN": "Mía González",
+      "estudiante_id": "28",
+      "asignaturas_id": [
+        10,
+        22,
+        21
+      ],
+      "periodo": "P24-02",
+      "precio": 30600
+    },
+    {
+      "id": 30,
+      "estudianteN": "Oliver Perez",
+      "estudiante_id": "29",
+      "asignaturas_id": [
+        2,
+        18
+      ],
+      "periodo": "P24-02",
+      "precio": 16000
+    },
+    {
+      "id": 31,
+      "estudianteN": "Valeria Díaz",
+      "estudiante_id": "30",
+      "asignaturas_id": [
+        10,
+        6,
+        11
+      ],
+      "periodo": "P24-02",
+      "precio": 32300
+    },
+    {
+      "id": 32,
+      "estudianteN": "Carlos Rodríguez",
+      "estudiante_id": "1",
+      "asignaturas_id": [
+        1,
+        17,
+        10,
+        6,
+        8,
+        4
+      ],
+      "periodo": "P24-02",
+      "precio": 58900
+    },
+    {
+      "id": 33,
+      "estudianteN": "Laura García",
+      "estudiante_id": "32",
+      "asignaturas_id": [
+        32,
+        31
+      ],
+      "periodo": "P24-02",
+      "precio": 18000
+    },
+    {
+      "id": 34,
+      "estudianteN": "Juan López",
+      "estudiante_id": "33",
+      "asignaturas_id": [
+        27
+      ],
+      "periodo": "P24-02",
+      "precio": 11200
+    },
+    {
+      "id": 35,
+      "estudianteN": "María Martínez",
+      "estudiante_id": "34",
+      "asignaturas_id": [
+        10,
+        3,
+        21
+      ],
+      "periodo": "P24-02",
+      "precio": 30600
+    },
+    {
+      "id": 36,
+      "estudianteN": "Ana Pérez",
+      "estudiante_id": "36",
+      "asignaturas_id": [
+        10,
+        3,
+        11,
+        22,
+        21
+      ],
+      "periodo": "P24-02",
+      "precio": 49300
+    },
+    {
+      "id": 37,
+      "estudianteN": "Diego Hernández",
+      "estudiante_id": "37",
+      "asignaturas_id": [
+        9
+      ],
+      "periodo": "P24-02",
+      "precio": 13300
+    },
+    {
+      "id": 38,
+      "estudianteN": "Sofía González",
+      "estudiante_id": "38",
+      "asignaturas_id": [
+        20,
+        15
+      ],
+      "periodo": "P24-02",
+      "precio": 26000
+    },
+    {
+      "id": 39,
+      "estudianteN": "Gabriel Ruiz",
+      "estudiante_id": "39",
+      "asignaturas_id": [
+        4,
+        8,
+        1,
+        17
+      ],
+      "periodo": "P24-02",
+      "precio": 39900
+    },
+    {
+      "id": 40,
+      "estudianteN": "Camila Díaz",
+      "estudiante_id": "40",
+      "asignaturas_id": [
+        6,
+        10,
+        11
+      ],
+      "periodo": "P24-01",
+      "precio": 32300
+    },
+    {
+      "id": 41,
+      "estudianteN": "Javier Alvarez",
+      "estudiante_id": "41",
+      "asignaturas_id": [
+        27
+      ],
+      "periodo": "P24-02",
+      "precio": 11200
+    },
+    {
+      "id": 42,
+      "estudianteN": "Valentina Romero",
+      "estudiante_id": "42",
+      "asignaturas_id": [
+        4,
+        12,
+        14
+      ],
+      "periodo": "P24-02",
+      "precio": 30000
+    },
+    {
+      "id": 43,
+      "estudianteN": "Matías López",
+      "estudiante_id": "43",
+      "asignaturas_id": [
+        4,
+        10,
+        12
+      ],
+      "periodo": "P24-02",
+      "precio": 30000
+    },
+    {
+      "id": 44,
+      "estudianteN": "Valeria Martínez",
+      "estudiante_id": "44",
+      "asignaturas_id": [
+        7,
+        5,
+        17,
+        9
+      ],
+      "periodo": "P24-01",
+      "precio": 48000
+    },
+    {
+      "id": 45,
+      "estudianteN": "Pedro Rodriguez",
+      "estudiante_id": "7",
+      "asignaturas_id": [
+        7,
+        5,
+        17,
+        9
+      ],
+      "periodo": "P24-02",
+      "precio": 48000
+    },
+    {
+      "id": 46,
+      "estudianteN": "Emma Pérez",
+      "estudiante_id": "46",
+      "asignaturas_id": [
+        2,
+        18
+      ],
+      "periodo": "P24-02",
+      "precio": 16000
+    },
+    {
+      "id": 47,
+      "estudianteN": "Ian Marulanda",
+      "estudiante_id": "47",
+      "asignaturas_id": [
+        10,
+        6,
+        11
+      ],
+      "periodo": "P24-02",
+      "precio": 32300
+    },
+    {
+      "id": 48,
+      "estudianteN": "Mía Jackson",
+      "estudiante_id": "48",
+      "asignaturas_id": [
+        1,
+        17,
+        6,
+        8,
+        4
+      ],
+      "periodo": "P24-02",
+      "precio": 51300
+    },
+    {
+      "id": 49,
+      "estudianteN": "Oliver Ruiz",
+      "estudiante_id": "49",
+      "asignaturas_id": [
+        27
+      ],
+      "periodo": "P24-02",
+      "precio": 11200
+    },
+    {
+      "id": 50,
+      "estudianteN": "Valeria Díaz",
+      "estudiante_id": "30",
+      "asignaturas_id": [
+        10,
+        6,
+        11
+      ],
+      "periodo": "P24-02",
+      "precio": 32300
     }
   ]
 }

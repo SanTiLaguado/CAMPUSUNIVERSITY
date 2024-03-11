@@ -410,3 +410,47 @@ footer{
   border: 0.5px solid rgba(153, 153, 153, 0.63);
 }
 
+/* INFORMES */
+
+#informes-sec{
+  display: flex;
+  flex-direction: column;
+}
+
+#main-inf{
+  display: flex;
+  justify-content: space-evenly;
+}
+#AsigMasMatr{
+  background-color: #a19292;
+  width: 800px;
+  height: 100px;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  line-height: 10px;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 0.5px solid rgba(153, 153, 153, 0.63);
+  border-radius: 5px;
+}
+
+#TotalMatrPer{
+  background-color: #aca1a1;
+  width: 800px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 0.5px solid rgba(153, 153, 153, 0.63);
+  border-radius: 5px;
+}
+
+#TotalMatrPer li{
+  font-size: 20px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  
+}

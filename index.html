@@ -21,8 +21,7 @@
         <ul>
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Informes</a><ul>
-              <li><a href="#">Informe Matriculas</a></li>
-              <li><a href="#">Informe Asignaturas</a></li>
+              <li><a href="#">Modulo de Informes</a></li>
               <li><a href="#">Generar Horarios</a></li></ul>
           </li>
           <li><a href="#">Datos Existentes</a>
@@ -58,17 +57,16 @@
         <div id="logotsu"> <img src="media/tsu-logo-black.png" alt="LOGO TSU"></div>
       </section>
 <!-- INFORMES -->
-      <section id="inforMatriculas">
-        <h2>Total del matriculas</h2>
-        <div id="info-Matriculas"></div>
-     </section>
-     <section id="inforAsignatura">
-        <h2>Informe de Asignaturas mas Matriculadas</h2>
-        <div id="info-Asignatura"></div>
+      <section id="informes-sec">
+        <div class="sec-title"><h2>Informes</h2></div>
+        <div id="main-inf" class="main-content">
+          <div id="AsigMasMatr"></div>
+          <div id="TotalMatrPer"></div>
+        </div>
      </section>
      <section id="Horarios">
       <h2>Generacion de Horarios</h2>
-      <div id="Horarios-form"></div>
+      <div id="reportehorario"></div>
       <div id="Horarios"></div>
    </section>
 <!-- INFO EXISTENTE -->
@@ -153,12 +151,11 @@
    <script src="app.js"></script>
    <script src="js/utilities.js"></script>
    <script src="js/buscadores.js"></script>
-   <script src="js/horarios.js"></script>
    <script src="js/Asignaturas.js"></script>
    <script src="js/Docentes.js"></script>
    <script src="js/Estudiantes.js"></script>
-   <script src="js/Informes.js"></script>
    <script src="js/ListadosExistentes.js"></script>
    <script src="js/Matriculas.js"></script>
+   <script src="js/Informes.js"></script>
 </body>
 </html>
